@@ -1,8 +1,11 @@
-import { HeroSection } from "../components/hero-section.component"
+import { HeroSection } from '../components/hero-section.component.tsx';
 
 export const Homepage = () => {
-  return <div className="w-screen h-screen bg-[#102429] flex">
-    <div className="w-[56%]"><HeroSection/></div>
-    <div className="w-[44%]"></div>
-  </div>
-}
+  return (
+    <div className='w-screen h-screen flex bg-center bg-no-repeat bg-fixed bg-cover bg-opacity-60' style={{backgroundImage: 'url(/src/assets/images/background.jpg)'}}>
+      <div className='w-full h-full'>
+        <HeroSection />
+      </div>
+    </div>
+  );
+};

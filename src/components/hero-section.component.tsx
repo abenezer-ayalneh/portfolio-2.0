@@ -1,41 +1,32 @@
-import { SocialMediaIcon } from './social-media-icon.component';
+import { SocialMediaIcon } from './social-media-icon.component.tsx';
 import GithubIcon from '../assets/icons/github-icon.svg';
 import LinkedinIcon from '../assets/icons/linkedin-icon.svg';
 import GmailIcon from '../assets/icons/gmail-icon.svg';
 import PhoneIcon from '../assets/icons/phone-icon.svg';
-import { Links } from './links.component';
-import { Divider } from './divider.component';
+import DownArrow from '../assets/icons/down-arrow.svg';
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col h-full justify-center items-start pl-20">
-      <div className="w-[46.25rem]">
-        <p className="text-[5.25rem] font-bold text-white leading-none">
-          Hey, I'm
-          <br />
-          Abenezer Ayalneh
-        </p>
+    <div className='h-full w-full flex flex-col justify-between pt-20 pb-[3.8rem] px-[1.25rem]'>
+      <div className={'w-full flex flex-col'}>
+        <p className={'text-[2.5rem] text-white font-bold'}>Hey, I'm<br />Abenezer Ayalneh</p>
+        <div className={'h-[1.92rem]'} />
+        <div className={'w-full flex justify-center'}>
+          <div className={'flex w-[12.5rem] justify-between'}>
+            <SocialMediaIcon icon={GithubIcon} />
+            <SocialMediaIcon icon={LinkedinIcon} />
+            <SocialMediaIcon icon={GmailIcon} />
+            <SocialMediaIcon icon={PhoneIcon} />
+          </div>
+        </div>
+        <div className={'h-[1.92rem]'} />
+        <p className={'text-center leading-[160%] text-[1.125rem] text-white'}>I’m a software engineer based in Addis Ababa, Ethiopia. I am adept at utilizing frameworks like Laravel and Nest.js,
+          working with databases such as MySQL and PostgreSQL, and leveraging Docker
+          for efficient containerization. My proficiency extends to frontend technologies like React.js, allowing me to contribute effectively to full-stack development projects.</p>
       </div>
-      <Divider height={3.12} />
-      <div className="flex justify-between w-[16.25rem]">
-        <SocialMediaIcon icon={GithubIcon} />
-        <SocialMediaIcon icon={LinkedinIcon} />
-        <SocialMediaIcon icon={GmailIcon} />
-        <SocialMediaIcon icon={PhoneIcon} />
+      <div className={'w-full flex justify-center items-center'}>
+        <img src={DownArrow} alt={'next page'}/>
       </div>
-      <Divider height={3.12} />
-      <div className="w-[46.25rem]">
-        <p className="text-[1.5rem] font-normal text-white leading-[160%]">
-          I'm a software engineer based in Addis Ababa, Ethiopia. I am adept at
-          utilizing frameworks like Laravel and Nest.js, working with databases
-          such as MySQL and PostgreSQL, and leveraging Docker for efficient
-          containerization. My proficiency extends to frontend technologies like
-          React.js, allowing me to contribute effectively to full-stack
-          development projects.
-        </p>
-      </div>
-      <Divider height={3.12} />
-      <Links />
     </div>
   );
 };

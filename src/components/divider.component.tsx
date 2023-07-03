@@ -1,4 +1,6 @@
-export const Divider = ({ height = 1 }: { height?: number }) => {
+import { FC, HTMLAttributes } from 'react';
+
+export const Divider: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...rest }) => {
   // const x = `h-[${height}rem]`
-  return <div className={`w-full h-[${height}rem] flex`}></div>
-}
+  return <div className={className} {...rest} />;
+};
