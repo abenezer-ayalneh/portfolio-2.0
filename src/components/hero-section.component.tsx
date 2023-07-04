@@ -33,7 +33,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
         <div className={'w-full flex justify-center lg:justify-start'}>
           <div className={'flex w-[12.5rem] lg:w-[16.25rem] justify-between'}>
             {socialMediaLinks.map((item, index) => (
-              <SocialMediaIcon icon={item.icon} link={item.link} />
+              <SocialMediaIcon icon={item.icon} link={item.link} key={index}/>
             ))}
           </div>
         </div>

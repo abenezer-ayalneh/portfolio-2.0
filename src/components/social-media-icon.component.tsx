@@ -29,7 +29,7 @@ export const SocialMediaIcon: FC<SocialMediaIconProps> = ({ icon, link }) => {
           link.startsWith('http') ? undefined : copyText
         }
         className="h-[2.4rem] w-[2.4rem] lg:h-[3.125rem] lg:w-[3.125rem] bg-[#D9D9D9] rounded-full flex justify-center items-center p-[0.5rem]"
-        onMouseOut={() => setCopyText('Click to Copy')}
+        onMouseLeave={() => setCopyText('Click to Copy')}
       >
         <img src={icon} alt="phone number" />
       </a>
