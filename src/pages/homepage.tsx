@@ -3,6 +3,7 @@ import { Showcase } from '../components/showcase.component.tsx';
 import { workHistories, education, projects, Tabs, tabs } from '../assets/data/portfolio-data.tsx';
 import { Link } from '../components/link.component.tsx';
 import { useState } from 'react';
+import BackgroundImage from '../assets/images/background.jpg'
 
 
 export const Homepage = () => {
@@ -11,12 +12,12 @@ export const Homepage = () => {
   return (
     <div
       className="w-screen h-screen overflow-y-scroll flex flex-col lg:flex-row bg-center bg-no-repeat bg-fixed bg-cover bg-opacity-60"
-      style={{ backgroundImage: 'url(/src/assets/images/background.jpg)' }}
+      style={{ backgroundImage: `url(${BackgroundImage})` }}
     >
-      <div className="w-full lg:w-[56%]">
+      <div className="w-full lg:w-[56%] lg:h-screen">
         <HeroSection activeTab={activeTab} setActiveTab={ setActiveTab} />
       </div>
-      <div className="w-full lg:w-[44%] px-[1.25rem] lg:h-full lg:overflow-y-scroll">
+      <div className="w-full lg:w-[44%] px-[1.25rem] lg:h-screen lg:overflow-y-scroll">
         <div className="w-full px-[0.62rem] flex justify-between lg:hidden" id='links'>
           {tabs.map((tab, index) => (
             <Link

@@ -16,12 +16,12 @@ export const workHistories: PortfolioDataInterface[] = [
     period: 'Jan 2023 - Present',
     location: 'Addis Ababa, Ethiopia',
     description: [
-      "I worked in the Software Engineering team creating backend APIs for different clients' needs. Tech stack used during my time here include Nest.js, React, Python, and more",
+      "I worked with the Software Engineering team creating backend APIs for different clients' needs. Tech stack used during my time here include Nest.js, React, Python, and more",
       'Some of the projects I have worked on include:',
     ],
     bulletPoints: [
-      'I have participated in development of a virtual game called Keno that is easy to play and intuitive. My responsibility was creating different modular parts of the backend like Authentication & Access Control, Database Management, Search and Filter, Websockets, and interconnecting those different modules. Also I’ve participated in the development of the front-end and hosting it to cloud environment (Nest.js, JWT, PostgreSQL, Prisma, Docker, Meilisearch, Socket.io, React.js, Tailwind, React Query)',
-      'I have participated in the development of reusable Microservices for the company’s software engineering team. I have created microservices like Authentication, File Management, Config, Geo-Location, Search and Filter (Nest.js, gRPC, TCP, PostgreSQL, Prisma, JWT, Cloudinary, SQLite, Graphhopper, Nominatim, Open Street Maps, Meilisearch)',
+      'I have participated in the development of a virtual game called Keno that is easy to play and intuitive. My responsibility was creating different modular parts of the backend like Authentication & Access Control, Database Management, Search and Filter, Websockets, and interconnecting those different modules. Also I’ve participated in the development of the front-end and hosting it to cloud environment (Nest.js, JWT, PostgreSQL, Prisma, Docker, Meilisearch, Socket.io, React.js, Tailwind, React Query)',
+      'I have participated in the development of reusable Microservices for the company\'s software engineering team. I have created microservices like Authentication, File Management, Config, Geo-Location, Search and Filter (Nest.js, gRPC, TCP, PostgreSQL, Prisma, JWT, Cloudinary, SQLite, Graphhopper, Nominatim, Open Street Maps, Meilisearch)',
       'I have participated in the new database experimenting experience and I have worked with a NewSQL database called SurrealDB and its experimental ORM cirql. I’ve implemented from simple CRUDs to graph relationships with it (Nest.js, SurrealDB, cirql, Dynamic Modules)',
     ],
   },
@@ -35,7 +35,7 @@ export const workHistories: PortfolioDataInterface[] = [
     period: 'April 2021 - Jan 2023',
     location: 'Addis Ababa, Ethiopia',
     description: [
-      'I worked in Application Development team and were mainly responsible for developing web applications that will aid different departments of the company automate different manual (things done with paper) tasks. Tech stack used during my time here include Laravel, PHP, React.js, Blade Template, MySQL, and more',
+      'I worked in the Application Development team and were mainly responsible for developing web applications that will aid different departments of the company automate different manual (things done with paper) tasks. Tech stack used during my time here include Laravel, PHP, React.js, Blade Template, MySQL, and more',
       'Some of the projects I have worked on include:',
     ],
     bulletPoints: [

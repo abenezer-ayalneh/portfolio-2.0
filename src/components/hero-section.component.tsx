@@ -22,14 +22,14 @@ export const HeroSection: FC<HeroSectionProps> = ({
       <div className={'w-full flex flex-col'}>
         <p
           className={
-            'text-[2.5rem] lg:text-[5.25rem] lg:leading-[115%] text-[#D9D9D9] font-bold'
+            'text-[2.5rem] lg:text-[3.75rem] lg:leading-[115%] text-[#D9D9D9] font-bold'
           }
         >
           Hey, I'm
           <br />
           Abenezer Ayalneh
         </p>
-        <div className={'h-[1.92rem] lg:h-[3.12rem]'} />
+        <div className={'h-[0.9rem] lg:h-[1.75rem]'} />
         <div className={'w-full flex justify-center lg:justify-start'}>
           <div className={'flex w-[12.5rem] lg:w-[16.25rem] justify-between'}>
             {socialMediaLinks.map((item, index) => (
@@ -37,10 +37,10 @@ export const HeroSection: FC<HeroSectionProps> = ({
             ))}
           </div>
         </div>
-        <div className={'h-[1.92rem] lg:h-[3.12rem]'} />
+        <div className={'h-[0.92rem] lg:h-[2.12rem]'} />
         <p
           className={
-            'text-center lg:text-left leading-[160%] text-[1.125rem] lg:text-[1.5rem] text-[#D9D9D9]'
+            'text-center lg:text-left leading-[160%] text-[1.125rem] lg:text-[1.3rem] text-[#D9D9D9]'
           }
         >
           I'm a software engineer based in Addis Ababa, Ethiopia. I am adept at
