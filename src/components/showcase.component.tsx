@@ -21,7 +21,7 @@ export const Showcase: FC<PortfolioDataInterface> = ({
 }) => {
   return (
     <div
-      className="py-[1.25rem] px-[0.94rem] lg:p-[1.88rem] my-[1.25rem] text-[#D9D9D9]"
+      className="py-[1.25rem] px-[0.94rem] lg:p-[1.88rem] mb-[1.25rem] text-[#D9D9D9]"
       style={{
         borderRadius: '0.125rem',
         background:

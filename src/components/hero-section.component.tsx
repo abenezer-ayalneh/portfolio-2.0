@@ -18,7 +18,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
   setActiveTab,
 }) => {
   return (
-    <div className="h-full w-full flex flex-col pt-20 lg:pt-[7.5rem] pb-[3.8rem] px-[1.25rem] lg:px-20">
+    <div className="h-full w-full flex flex-col pt-20 lg:pt-[8vh] pb-[3.8rem] px-[1.25rem] lg:px-16">
       <div className={'w-full flex flex-col'}>
         <p
           className={
@@ -29,7 +29,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
           <br />
           Abenezer Ayalneh
         </p>
-        <div className={'h-[0.9rem] lg:h-[1.75rem]'} />
+        <div className={'h-[0.9rem] lg:h-[3.5vh]'} />
         <div className={'w-full flex justify-center lg:justify-start'}>
           <div className={'flex w-[12.5rem] lg:w-[16.25rem] justify-between'}>
             {socialMediaLinks.map((item, index) => (
@@ -37,7 +37,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
             ))}
           </div>
         </div>
-        <div className={'h-[0.92rem] lg:h-[2.12rem]'} />
+        <div className={'h-[0.9rem] lg:h-[3.5vh]'} />
         <p
           className={
             'text-center lg:text-left leading-[160%] text-[1.125rem] lg:text-[1.3rem] text-[#D9D9D9]'
