@@ -71,11 +71,16 @@ button:focus-visible {
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'gg-sans';
+  src: url('./src/assets/fonts/gg-sans/gg-sans-regular.ttf') format('truetype')
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'gg-sans', Arial, Helvetica, sans-serif;;
 }
 
 body{
