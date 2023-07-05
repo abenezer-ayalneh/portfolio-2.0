@@ -73,7 +73,7 @@ button:focus-visible {
 
 @font-face {
   font-family: 'gg-sans';
-  src: url('./src/assets/fonts/gg-sans/gg-sans-regular.ttf') format('truetype')
+  src: url('./assets/fonts/gg-sans/gg-sans-regular.ttf') format('truetype')
 }
 
 *{

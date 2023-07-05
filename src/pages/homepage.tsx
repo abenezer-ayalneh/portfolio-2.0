@@ -28,7 +28,6 @@ export const Homepage = () => {
         <PerfectScrollbar>
           <div
             className="w-full px-[0.62rem] py-[1.5rem] flex justify-between lg:hidden"
-            id="links"
           >
             {tabs.map((tab, index) => (
               <Link
