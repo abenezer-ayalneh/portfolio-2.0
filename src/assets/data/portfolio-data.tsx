@@ -71,7 +71,7 @@ export const projects: PortfolioDataInterface[] = [
   {
     title: 'Telegram Bot',
     description: [
-      'I have worked on a project to a company that lets its customers to know more about the record the company has of them through the famous social media platform’s bot API  (i.e., Telegram bot API). I have used Laravel to fetch messages store on the telegram servers, process the requests and send the message sender the appropriate result.',
+      'I have worked on a project to a company that lets its customers to know more about the record the company has of them through the famous social media platform’s bot API  (i.e., Telegram bot API). I have used Laravel to fetch messages stored on the telegram servers, process the requests and send the message sender the appropriate result.',
     ],
   },
   {
