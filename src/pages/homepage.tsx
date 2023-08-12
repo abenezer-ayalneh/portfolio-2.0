@@ -1,18 +1,16 @@
-import { HeroSection } from '../components/hero-section.component.tsx';
-import { Showcase } from '../components/showcase.component.tsx';
-import {
-  workHistories,
-  education,
-  projects,
-  Tabs,
-  tabs,
-} from '../assets/data/portfolio-data.tsx';
-import { Link } from '../components/link.component.tsx';
 import { useState } from 'react';
-import BackgroundImage from '../assets/images/background.jpg';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import { ElevatorPitch } from '../components/elevator-pitch.component.tsx';
+import {
+  projects,
+  Tabs,
+  tabs, workHistories
+} from '../assets/data/portfolio-data';
+import BackgroundImage from '../assets/images/background.jpg';
+import { ElevatorPitch } from '../components/elevator-pitch.component';
+import { HeroSection } from '../components/hero-section.component';
+import { Link } from '../components/link.component';
+import { Showcase } from '../components/showcase.component';
 
 export const Homepage = () => {
   const [activeTab, setActiveTab] = useState<Tabs>(Tabs.PORTFOLIO);

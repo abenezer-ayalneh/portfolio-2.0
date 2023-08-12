@@ -1,11 +1,11 @@
-import { SocialMediaIcon } from './social-media-icon.component.tsx';
+import { SocialMediaIcon } from './social-media-icon.component';
 import DownArrow from '../assets/icons/down-arrow.svg';
-import { Link } from './link.component.tsx';
+import { Link } from './link.component';
 import {
   socialMediaLinks,
   Tabs,
   tabs,
-} from '../assets/data/portfolio-data.tsx';
+} from '../assets/data/portfolio-data';
 import { Dispatch, FC, SetStateAction } from 'react';
 
 type HeroSectionProps = {
