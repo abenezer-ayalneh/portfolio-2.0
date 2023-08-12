@@ -1,7 +1,11 @@
 import { SocialMediaIcon } from './social-media-icon.component.tsx';
 import DownArrow from '../assets/icons/down-arrow.svg';
 import { Link } from './link.component.tsx';
-import { socialMediaLinks, Tabs, tabs } from '../assets/data/portfolio-data.tsx';
+import {
+  socialMediaLinks,
+  Tabs,
+  tabs,
+} from '../assets/data/portfolio-data.tsx';
 import { Dispatch, FC, SetStateAction } from 'react';
 
 type HeroSectionProps = {
@@ -10,18 +14,18 @@ type HeroSectionProps = {
 };
 
 export const HeroSection: FC<HeroSectionProps> = ({
-                                                    activeTab,
-                                                    setActiveTab,
-                                                  }) => {
+  activeTab,
+  setActiveTab,
+}) => {
   return (
-    <div className='h-full w-full flex flex-col pt-20 lg:pt-[8vh] pb-[3.8rem] px-[1.25rem] lg:px-16'>
+    <div className="h-full w-full flex flex-col pt-20 lg:pt-[8vh] pb-[3.8rem] px-[1.25rem] lg:px-16">
       <div className={'w-full flex flex-col'}>
         <p
           className={
-            'text-[2.5rem] lg:text-[3.75rem] lg:leading-[115%] text-[#D9D9D9] font-bold'
+            'text-[2.5rem] lg:text-[2.9rem] lg:leading-[115%] text-[#D9D9D9] font-bold'
           }
         >
-          Hey, I'm
+          This is,
           <br />
           Abenezer Ayalneh
         </p>
@@ -39,15 +43,19 @@ export const HeroSection: FC<HeroSectionProps> = ({
             'text-center lg:text-left leading-[160%] text-[1.125rem] lg:text-[1.3rem] text-[#D9D9D9]'
           }
         >
-          I'm a software engineer based in Addis Ababa, Ethiopia. I am adept at
-          utilizing frameworks like Laravel and Nest.js, working with databases
-          such as MySQL and PostgreSQL, and leveraging Docker for efficient
-          containerization. My proficiency extends to frontend technologies like
-          React.js, allowing me to contribute effectively to full-stack
-          development projects.
+          He has a bachelor's degree in computer science. He is currently
+          working as a backend software engineer in a tech startup company. He
+          has been working as a software engineer for over two years now. He has
+          spent most of his time as a backend heavy full-stack developer.
+          <br />
+          He believes that he is the best person to offer the skills he
+          developed because he is confident in himself, he is a good
+          communicator, he is good at understanding the needs of clients quickly
+          and in times where he fail to do so he asks valuable questions so that
+          he could grasp their every needs.
         </p>
         <div className={'hidden lg:flex lg:h-[3.12rem]'} />
-        <div className='hidden w-full px-[0.62rem] lg:flex lg:justify-between lg:w-[30.5625rem]'>
+        <div className="hidden w-full px-[0.62rem] lg:flex lg:justify-between lg:w-[30.5625rem]">
           {tabs.map((tab, index) => (
             <Link
               text={tab.name}
@@ -60,7 +68,9 @@ export const HeroSection: FC<HeroSectionProps> = ({
       </div>
       <div className={'w-full flex justify-center items-center lg:hidden'}>
         <div className={'h-40 lg:h-[3.12rem]'} />
-        <a href='#links'><img src={DownArrow} alt={'next page'} /></a>
+        <a href="#links">
+          <img src={DownArrow} alt={'next page'} />
+        </a>
       </div>
     </div>
   );

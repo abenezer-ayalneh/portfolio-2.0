@@ -18,6 +18,7 @@ export const Showcase: FC<PortfolioDataInterface> = ({
   jobType,
   location,
   period,
+  link
 }) => {
   return (
     <div
@@ -66,9 +67,8 @@ export const Showcase: FC<PortfolioDataInterface> = ({
       <div className={'h-[1.25rem]'} />
       {description.map((text, index) => (
         <Fragment key={index}>
-          <p className="text-[0.8125rem] lg:text-[1.125rem] leading-[125%]">
-            {text}
-          </p>
+          <p className="text-[0.8125rem] lg:text-[1.125rem] leading-[125%]" dangerouslySetInnerHTML={{ __html: text }} />
+          {link && <a href={link} target='_blank' className="text-[#7ED957] text-base">Link</a>}
           <div className={'h-[0.63rem]'} />
         </Fragment>
       ))}

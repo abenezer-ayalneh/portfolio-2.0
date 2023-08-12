@@ -1,5 +1,6 @@
 export type PortfolioDataInterface = {
   title: string;
+  link?: string,
   company?: Company;
   jobType?: string;
   period?: string;
