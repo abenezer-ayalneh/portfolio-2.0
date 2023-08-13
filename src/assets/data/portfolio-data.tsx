@@ -49,7 +49,7 @@ export const workHistories: PortfolioDataInterface[] = [
 
 export const projects: PortfolioDataInterface[] = [
   {
-    title: 'Presentation for Out Health Aid App',
+    title: 'Presentation for Our Health Aid App',
     description: [
       'This is a presentation of our health care aiding application called "Hakimie". It briefly explains the concept behind it and what it aims to solve and some prototypes.'
     ],
@@ -65,7 +65,7 @@ export const projects: PortfolioDataInterface[] = [
   {
     title: 'Mobile Application API',
     description: [
-      'I have worked on a project where I developed a backend API for a mobile application (A broker app for connecting buyers with sellers) using Laravel. I have used token based authentication (JWT), protecting API routes with middlewares, JSON based response generations and many more.',
+      'I have worked on a project where I developed a backend API for a mobile application (A broker app for connecting buyers with sellers) using Laravel. I have used token based authentication (JWT), protecting API routes with middleware, JSON based response generations and many more.',
     ],
   },
   {
