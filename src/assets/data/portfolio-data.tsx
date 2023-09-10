@@ -112,12 +112,14 @@ export const enum Tabs {
   WORK,
   PROJECTS,
   EDUCATION,
+  CONTACT_ME,
 }
 
 export const tabs = [
   { name: '01 --- Work', tab: Tabs.WORK },
   { name: '02 --- Projects', tab: Tabs.PROJECTS },
   { name: '03 --- Education', tab: Tabs.EDUCATION },
+  { name: '04 --- Contact Me', tab: Tabs.CONTACT_ME },
 ];
 
 export const socialMediaLinks: SocialMediaIconProps[] = [

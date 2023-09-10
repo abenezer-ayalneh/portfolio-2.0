@@ -1,7 +1,11 @@
 import { SocialMediaIcon } from './social-media-icon.component.tsx';
 import DownArrow from '../assets/icons/down-arrow.svg';
 import { Link } from './link.component.tsx';
-import { socialMediaLinks, Tabs, tabs } from '../assets/data/portfolio-data.tsx';
+import {
+  socialMediaLinks,
+  Tabs,
+  tabs,
+} from '../assets/data/portfolio-data.tsx';
 import { Dispatch, FC, SetStateAction } from 'react';
 
 type HeroSectionProps = {
@@ -10,11 +14,11 @@ type HeroSectionProps = {
 };
 
 export const HeroSection: FC<HeroSectionProps> = ({
-                                                    activeTab,
-                                                    setActiveTab,
-                                                  }) => {
+  activeTab,
+  setActiveTab,
+}) => {
   return (
-    <div className='h-full w-full flex flex-col pt-20 lg:pt-[8vh] pb-[3.8rem] px-[1.25rem] lg:px-16'>
+    <div className="h-full w-full flex flex-col pt-20 lg:pt-[8vh] pb-[3.8rem] px-[1.25rem] lg:px-16">
       <div className={'w-full flex flex-col'}>
         <p
           className={
@@ -47,7 +51,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
           development projects.
         </p>
         <div className={'hidden lg:flex lg:h-[3.12rem]'} />
-        <div className='hidden w-full px-[0.62rem] lg:flex lg:justify-between lg:w-[30.5625rem]'>
+        <div className="hidden w-full px-[0.62rem] lg:flex lg:justify-between lg:w-[80%]">
           {tabs.map((tab, index) => (
             <Link
               text={tab.name}
@@ -60,7 +64,9 @@ export const HeroSection: FC<HeroSectionProps> = ({
       </div>
       <div className={'w-full flex justify-center items-center lg:hidden'}>
         <div className={'h-40 lg:h-[3.12rem]'} />
-        <a href='#links'><img src={DownArrow} alt={'next page'} /></a>
+        <a href="#links">
+          <img src={DownArrow} alt={'next page'} />
+        </a>
       </div>
     </div>
   );

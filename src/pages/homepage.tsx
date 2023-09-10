@@ -12,6 +12,7 @@ import { useState } from 'react';
 import BackgroundImage from '../assets/images/background.jpg';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import { ContactMe } from './contact.me.page.tsx';
 
 export const Homepage = () => {
   const [activeTab, setActiveTab] = useState<Tabs>(Tabs.WORK);
@@ -50,6 +51,7 @@ export const Homepage = () => {
             education.map((workHistory, index) => (
               <Showcase key={index} {...workHistory} />
             ))}
+          {activeTab === Tabs.CONTACT_ME && <ContactMe/>}
         </PerfectScrollbar>
       </div>
       <div className="lg:hidden w-full lg:w-[44%] px-[1.25rem] lg:h-screen lg:overflow-hidden lg:right-0 lg:pt-4 lg:absolute">
@@ -59,7 +61,7 @@ export const Homepage = () => {
           >
             {tabs.map((tab, index) => (
               <Link
-                text={tab.name}
+                text={tab.name.split(' --- ')[1]}
                 key={index}
                 active={activeTab === tab.tab}
                 onClick={() => setActiveTab(tab.tab)}
@@ -78,6 +80,7 @@ export const Homepage = () => {
             education.map((workHistory, index) => (
               <Showcase key={index} {...workHistory} />
             ))}
+          {activeTab === Tabs.CONTACT_ME && <ContactMe/>}
       </div>
     </div>
   );
