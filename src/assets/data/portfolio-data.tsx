@@ -7,7 +7,7 @@ import { SocialMediaIconProps } from '../../components/social-media-icon.compone
 
 export const workHistories: PortfolioDataInterface[] = [
   {
-    title: 'Backend Developer',
+    title: 'Fullstack Developer',
     company: {
       name: 'Ablaze Labs',
       link: 'https://ablazelabs.com/',
