@@ -1,11 +1,7 @@
 import { SocialMediaIcon } from './social-media-icon.component.tsx';
 import DownArrow from '../assets/icons/down-arrow.svg';
 import { Link } from './link.component.tsx';
-import {
-  socialMediaLinks,
-  Tabs,
-  tabs,
-} from '../assets/data/portfolio-data.tsx';
+import { socialMediaLinks, Tabs, tabs } from '../assets/data/portfolio-data.tsx';
 import { Dispatch, FC, SetStateAction } from 'react';
 
 type HeroSectionProps = {
@@ -14,9 +10,9 @@ type HeroSectionProps = {
 };
 
 export const HeroSection: FC<HeroSectionProps> = ({
-  activeTab,
-  setActiveTab,
-}) => {
+                                                    activeTab,
+                                                    setActiveTab,
+                                                  }) => {
   return (
     <div className="h-full w-full flex flex-col pt-20 lg:pt-[8vh] pb-[3.8rem] px-[1.25rem] lg:px-16">
       <div className={'w-full flex flex-col'}>
@@ -43,12 +39,8 @@ export const HeroSection: FC<HeroSectionProps> = ({
             'text-center lg:text-left leading-[160%] text-[1.125rem] lg:text-[1.3rem] text-[#D9D9D9]'
           }
         >
-          I'm a software engineer based in Addis Ababa, Ethiopia. I am adept at
-          utilizing frameworks like Laravel and Nest.js, working with databases
-          such as MySQL and PostgreSQL, and leveraging Docker for efficient
-          containerization. My proficiency extends to frontend technologies like
-          React.js, allowing me to contribute effectively to full-stack
-          development projects.
+          Full-Stack Developer with 4 years of experience in web application development. My expertise concentrates on Typescript based frontend and backend technologies namely Angular/React and
+          Nest.js(Node.js). Even though I don’t like code issues, I have the quality of providing solutions in the best-practice way.
         </p>
         <div className={'hidden lg:flex lg:h-[3.12rem]'} />
         <div className="hidden w-full px-[0.62rem] lg:flex lg:justify-between lg:w-[80%]">

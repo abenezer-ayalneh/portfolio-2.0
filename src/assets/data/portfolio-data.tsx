@@ -9,20 +9,40 @@ export const workHistories: PortfolioDataInterface[] = [
   {
     title: 'Fullstack Developer',
     company: {
+      name: 'Multi Matrix Ltd',
+      link: 'https://www.multimatrixlimited.com/',
+    },
+    jobType: 'Full Time',
+    period: 'June 2024 - Present',
+    location: 'Hong Kong, China (Remote)',
+    description: [
+      'I am working with the Software Engineering team creating easy to use frontend applications. Tech stack used during my time here include Angular, Ionic, and more',
+      'Some of the tasks I am working on include:',
+    ],
+    bulletPoints: [
+      'Participating in a white label based online sports betting project as a frontend angular developer',
+      'Learning to use Ionic framework paired with angular-17 to create a mobile first & user friendly version of the sports betting application',
+      'Working with the backend team to integrate third party APIs that provide websocket based updates to the web application',
+      'Helping with fixing issues on the backend application (with Nest.js) that are related to a 3rd party API implementation',
+    ],
+  },
+  {
+    title: 'Team Lead/Full-Stack Developer',
+    company: {
       name: 'Ablaze Labs',
       link: 'https://ablazelabs.com/',
     },
     jobType: 'Full Time',
-    period: 'Jan 2023 - Present',
-    location: 'Addis Ababa, Ethiopia',
+    period: 'January 2023 - June 2024',
+    location: 'Addis Ababa, Ethiopia (On-site)',
     description: [
-      "I worked with the Software Engineering team creating backend APIs for different clients' needs. Tech stack used during my time here include Nest.js, React, Python, and more",
+      'I worked with the Software Engineering team creating backend APIs for different clients\' needs. Tech stack used during my time here include Nest.js, React, Python, and more',
       'Some of the projects I have worked on include:',
     ],
     bulletPoints: [
-      'I have participated in the development of a virtual game called Keno that is easy to play and intuitive. My responsibility was creating different modular parts of the backend like Authentication & Access Control, Database Management, Search and Filter, Websockets, and interconnecting those different modules. Also I’ve participated in the development of the front-end and hosting it to cloud environment (Nest.js, JWT, PostgreSQL, Prisma, Docker, Meilisearch, Socket.io, React.js, Tailwind, React Query)',
-      'I have participated in the development of reusable Microservices for the company\'s software engineering team. I have created microservices like Authentication, File Management, Config, Geo-Location, Search and Filter (Nest.js, gRPC, TCP, PostgreSQL, Prisma, JWT, Cloudinary, SQLite, Graphhopper, Nominatim, Open Street Maps, Meilisearch)',
-      'I have participated in the new database experimenting experience and I have worked with a NewSQL database called SurrealDB and its experimental ORM cirql. I’ve implemented from simple CRUDs to graph relationships with it (Nest.js, SurrealDB, cirql, Dynamic Modules)',
+      'Participated as a team lead in the development of a telegram SaaS bot for online virtual betting game that can accommodate multiple companies with multiple players, handles payment and has live updates for game results',
+      'Participated as a backend developer in the development of reusable microservices which include authentication, file management, configuration, geo-location, and search engine. I minimized the project preparation time for subsequent microservice based projects by 40%',
+      'Participated in an experimental project on a NewSQL database called SurrealDB and its ORM cirql. I’ve used the database to implement tasks from simple CRUDs to graph relationships pairing it with Nest.js framework',
     ],
   },
   {
@@ -32,17 +52,16 @@ export const workHistories: PortfolioDataInterface[] = [
       link: 'https://bgiethiopia.com/',
     },
     jobType: 'Full Time',
-    period: 'April 2021 - Jan 2023',
-    location: 'Addis Ababa, Ethiopia',
+    period: 'April 2021 - January 2023',
+    location: 'Addis Ababa, Ethiopia (On-site)',
     description: [
       'I worked in the Application Development team and were mainly responsible for developing web applications that will aid different departments of the company automate different manual (things done with paper) tasks. Tech stack used during my time here include Laravel, PHP, React.js, Blade Template, MySQL, and more',
       'Some of the projects I have worked on include:',
     ],
     bulletPoints: [
-      'I have Developed a document validation and standardization system that all departments of the company used to standardize their document based on the company format and easily access them from the system. It also included a visualized hierarchy and interconnections between different sections of the company and flow of production (Laravel, MySQL, Blade Template, Apache, PHP 8, Chart.js)',
-      'I have participated in development of an overtime management system that can handle overtime scheduling and executing in all 6+ sites of the company with 3 level of manager approval stages. This system helped all departments to easily plan overtimes ahead and helped HR to easily access the final results for payroll purposes. It also helped higher managers to easily keep track of the overtime hours using different charts and tables (Laravel, MySQL, MSSQL, Blade Template, Apache, PHP 8, Chart.js)',
-      'I have developed an accident reporting web application for safety and health department of the company. Its use is for ease of communication between members of this department whenever an accident occurs. It includes data feeding interface for the representatives and additional report dashboard for managers (Laravel, MySQL, MSSQL, Blade Template, Apache, PHP 8, Chart.js, Morris.js)',
-      'I have developed an authentication system that leverages the company’s LDAP server for authenticating the users with their LDAP credentials into all the applications I’ve mentioned above',
+      'Developed a document validation and standardization system that all departments of the company used to standardize their document. My web application helped the company to minimize the time planned for standardization by 60% (from 10 months to 4)',
+      'Participated in development of an overtime management system that can handle overtime scheduling and executing in all 6 sites of the company handling more than 450 employees with 3 level of manager approval stages',
+      'I have developed an authentication system that leverages the company’s LDAP server for authenticating the users with their LDAP credentials into all the applications I’ve mentioned above. This helped the company’s help center by 100% removing issues related to authentication to in-house applications',
     ],
   },
 ];
@@ -93,19 +112,19 @@ export const education: PortfolioDataInterface[] = [
       'In my 4 year stay the the campus I was able to grasp basic programming concepts, skills, components, and architectures that paved the way for me to pursue the dream of being a software engineer.',
     ],
   },
-  {
-    title: 'Data Science',
-    company: {
-      name: 'ALX',
-      link: 'https://www.alxafrica.com/',
-    },
-    period: 'May 2023 - July 2024',
-    location: 'Addis Ababa, Ethiopia',
-    description: [
-      'Designed to help you gain in-demand data science and machine learning skills, the ALX Data Science Program will equip you with the crucial tools and techniques to analyze visual and statistical data, create models, and communicate results to inform data-driven decisions. In addition, you will learn the universal programming language Python and solve real-world problems using machine learning.',
-      "I'm currently enrolled in this program.",
-    ],
-  },
+  // {
+  //   title: 'Data Science',
+  //   company: {
+  //     name: 'ALX',
+  //     link: 'https://www.alxafrica.com/',
+  //   },
+  //   period: 'May 2023 - July 2024',
+  //   location: 'Addis Ababa, Ethiopia',
+  //   description: [
+  //     'Designed to help you gain in-demand data science and machine learning skills, the ALX Data Science Program will equip you with the crucial tools and techniques to analyze visual and statistical data, create models, and communicate results to inform data-driven decisions. In addition, you will learn the universal programming language Python and solve real-world problems using machine learning.',
+  //     'I\'m currently enrolled in this program.',
+  //   ],
+  // },
 ];
 
 export const enum Tabs {
@@ -125,16 +144,16 @@ export const tabs = [
 export const socialMediaLinks: SocialMediaIconProps[] = [
   {
     icon: GithubIcon,
-    link: 'https://github.com/abenezer-ayalneh'
+    link: 'https://github.com/abenezer-ayalneh',
   },
   {
     icon: LinkedinIcon,
-    link: 'https://www.linkedin.com/in/abenezer-ayalneh-b579911b5/'
+    link: 'https://www.linkedin.com/in/abenezer-ayalneh-b579911b5/',
   }, {
     icon: GmailIcon,
-    link: 'abenezer.ayalneh.42@gmail.com'
-  },{
+    link: 'abenezer.ayalneh.42@gmail.com',
+  }, {
     icon: PhoneIcon,
-    link: '+251916667538'
-  }
-]
+    link: '+251916667538',
+  },
+];
