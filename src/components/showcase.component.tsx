@@ -10,6 +10,31 @@ const DotSeparator = () => {
   );
 };
 
+// Helper function to parse text and wrap URLs
+const parseTextWithUrls = (text: string) => {
+  const urlRegex =
+    /(https?:\/\/[^\s|^)]+)/g; // Regex to match URLs starting with http or https
+
+  const parts = text.split(urlRegex);
+
+  return parts.map((part, index) => {
+    if (urlRegex.test(part)) {
+      return (
+        <a
+          key={`url-${index}`}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#7ED957] underline"
+        >
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+};
+
 export const Showcase: FC<PortfolioDataInterface> = ({
   title,
   description,
@@ -18,6 +43,7 @@ export const Showcase: FC<PortfolioDataInterface> = ({
   jobType,
   location,
   period,
+  link,
 }) => {
   return (
     <div
@@ -30,15 +56,26 @@ export const Showcase: FC<PortfolioDataInterface> = ({
       }}
     >
       <div>
-        <p className="text-[1.375rem] lg:text-[1.75rem] text-[#D9D9D9] font-bold leading-[125%]">
-          {title}
-        </p>
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            className="text-[1.375rem] lg:text-[1.75rem] font-bold leading-[125%] text-[#7ED957] underline"
+          >
+            {title}
+          </a>
+        ) : (
+          <p className="text-[1.375rem] lg:text-[1.75rem] text-[#D9D9D9] font-bold leading-[125%]">
+            {title}
+          </p>
+        )}
         <div className="flex justify-start items-center text-[0.875rem] lg:text-[1.125rem] leading-[125%]">
           {company && (
             <a
               href={`${company?.link ?? '#'}`}
               target="_blank"
-              className="text-[#7ED957]"
+              rel="noopener noreferrer"
+              className="text-[#7ED957] underline"
             >
               {company?.name}
             </a>
@@ -67,7 +104,7 @@ export const Showcase: FC<PortfolioDataInterface> = ({
       {description.map((text, index) => (
         <Fragment key={index}>
           <p className="text-[0.8125rem] lg:text-[1.125rem] leading-[125%]">
-            {text}
+            {parseTextWithUrls(text)}
           </p>
           <div className={'h-[0.63rem]'} />
         </Fragment>

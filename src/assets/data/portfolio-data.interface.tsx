@@ -6,6 +6,7 @@ export type PortfolioDataInterface = {
   location?: string;
   description: string[];
   bulletPoints?: string[];
+  link?: string;
 }
 
 type Company = {

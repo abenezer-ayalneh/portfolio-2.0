@@ -67,34 +67,57 @@ export const workHistories: PortfolioDataInterface[] = [
 ];
 
 export const projects: PortfolioDataInterface[] = [
+  // {
+  //   title: 'Mobile Application API',
+  //   description: [
+  //     'I have worked on a project where I developed a backend API for a mobile application (A broker app for connecting buyers with sellers) using Laravel. I have used token based authentication (JWT), protecting API routes with middlewares, JSON based response generations and many more.',
+  //   ],
+  // },
+  // {
+  //   title: 'Telegram Bot',
+  //   description: [
+  //     'I have worked on a project to a company that lets its customers to know more about the record the company has of them through the famous social media platform’s bot API  (i.e., Telegram bot API). I have used Laravel to fetch messages store on the telegram servers, process the requests and send the message sender the appropriate result.',
+  //   ],
+  // },
+  // {
+  //   title: 'e-Commerce React Application',
+  //   description: [
+  //     'In learning about the fundamentals of react and all the things that come with it, I have made a simple yet highly functional e-commerce cloth selling application. In doing so, I have used the core features of react like hooks, Redux state management, API handling packages (like axios) and many more.',
+  //   ],
+  // },
+  // {
+  //   title: 'Social Media App',
+  //   description: [
+  //     'This is a instagram look-alike app that is made by flutter. I tried to make it create multiple users, accept posts, like, comment, update profile etc. In addition to flutter I have used firebase for this app development for storage (firestore), authentication (google sign in) and for on action triggers (functions).',
+  //   ],
+  // },
+  // {
+  //   title: 'Design to Flutter Practice Apps',
+  //   description: [
+  //     'I have been practicing on making flutter apps by downloading UI designs and implementing them using flutter. I have a two paged app(uvento_app) and an on progress 24 pages (podcast_app). For their code you can check my GitHub link. They are listed under design-to-flutter repository.',
+  //   ],
+  // },
   {
-    title: 'Mobile Application API',
+    title: 'Lynx: A common word guessing game',
+    link: 'https://gametrix.org',
     description: [
-      'I have worked on a project where I developed a backend API for a mobile application (A broker app for connecting buyers with sellers) using Laravel. I have used token based authentication (JWT), protecting API routes with middlewares, JSON based response generations and many more.',
+      'This is a fun game you can play solo or with friends. It shows you a list of cue words which has one common word that can complete them and your job is to guess that common word. It uses Colyseus(https://colyseus.io/) to support in-sync multiplayer experience and LiveKit(https://livekit.io/) to enable a WebRTC based voice communication among players to make the game more fun.',
+      'Technologies used: Angular, TailwindCSS, NgRx SignalStore, Nest.js, Express, Node.js, Typescript, Colyseus, LiveKit, PostgreSQL, Prisma, Docker, nginx.'
     ],
   },
   {
-    title: 'Telegram Bot',
+    title: 'White-label based sports betting',
+    link: 'https://m.freedemokit.com',
     description: [
-      'I have worked on a project to a company that lets its customers to know more about the record the company has of them through the famous social media platform’s bot API  (i.e., Telegram bot API). I have used Laravel to fetch messages store on the telegram servers, process the requests and send the message sender the appropriate result.',
+      'This is a fully fledged sports betting application that enables players to participate in online betting experience. It integrates a third-party API to fetch and display realtime price updates on the user interface, it enables users place bets, see their previous bets and many more.',
+      'Technologies used: Angular, Ionic, Typescript, WebSocket, NgRx SignalStore, TailwindCSS, Web-Workers.'
     ],
   },
   {
-    title: 'e-Commerce React Application',
+    title: 'Portfolio website',
+    link: 'https://abenezer-ayalneh.vercel.app',
     description: [
-      'In learning about the fundamentals of react and all the things that come with it, I have made a simple yet highly functional e-commerce cloth selling application. In doing so, I have used the core features of react like hooks, Redux state management, API handling packages (like axios) and many more.',
-    ],
-  },
-  {
-    title: 'Social Media App',
-    description: [
-      'This is a instagram look-alike app that is made by flutter. I tried to make it create multiple users, accept posts, like, comment, update profile etc. In addition to flutter I have used firebase for this app development for storage (firestore), authentication (google sign in) and for on action triggers (functions).',
-    ],
-  },
-  {
-    title: 'Design to Flutter Practice Apps',
-    description: [
-      'I have been practicing on making flutter apps by downloading UI designs and implementing them using flutter. I have a two paged app(uvento_app) and an on progress 24 pages (podcast_app). For their code you can check my GitHub link. They are listed under design-to-flutter repository.',
+      'I\'ve made a very simple portfolio web application to tell my story, what I did, what kind of projects I\'ve participated in, and a way to contact me. I\'ve hosted it on vercel(https://vercel.com).',
     ],
   },
 ];
