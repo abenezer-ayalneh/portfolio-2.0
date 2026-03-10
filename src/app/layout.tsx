@@ -13,6 +13,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abenezer-ayalneh.vercel.app'),
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
   title: {
     default: 'Abenezer Ayalneh — Full-Stack Developer',
     template: '%s | Abenezer Ayalneh',
