@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abenezer Ayalneh — Resume</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --black: #111;
+        --gray: #444;
+        --light-gray: #777;
+        --rule: #d4d4d4;
+        --accent: #2563eb;
+        --page-width: 780px;
+        --side: 44px;
+        --top: 48px;
+      }
+
+      body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 10.5pt;
+        line-height: 1.55;
+        color: var(--black);
+        background: #fff;
+      }
+
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* ── Page shell ─────────────────────────────────────────── */
+      .page {
+        max-width: var(--page-width);
+        margin: 0 auto;
+        padding: var(--top) var(--side);
+      }
+
+      /* ── Header ─────────────────────────────────────────────── */
+      .header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+      .header-left h1 { font-size: 26pt; font-weight: 700; letter-spacing: -0.5px; line-height: 1.1; }
+      .header-left .tagline { margin-top: 6px; font-size: 10.5pt; color: var(--gray); font-style: italic; }
+      .header-right { text-align: right; font-size: 9.5pt; color: var(--gray); line-height: 1.8; white-space: nowrap; }
+      .header-right a { color: var(--accent); }
+
+      /* ── Divider ─────────────────────────────────────────────── */
+      hr { border: none; border-top: 1.5px solid var(--rule); margin: 16px 0; }
+      hr.thin { border-top-width: 1px; }
+
+      /* ── Section title ───────────────────────────────────────── */
+      .section-title {
+        font-family: 'Arial', 'Helvetica', sans-serif;
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 12px;
+      }
+
+      /* ── Section spacing ─────────────────────────────────────── */
+      .section { margin-bottom: 22px; }
+
+      /* ── Entry (work / edu / project) ────────────────────────── */
+      .entry { margin-bottom: 14px; }
+      .entry:last-child { margin-bottom: 0; }
+
+      .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+      .entry-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 10.5pt; font-weight: 700; }
+      .entry-company { font-size: 10pt; color: var(--gray); }
+      .entry-meta { font-size: 9pt; color: var(--light-gray); white-space: nowrap; text-align: right; }
+      .entry-location { font-size: 9pt; color: var(--light-gray); margin-bottom: 5px; }
+
+      .entry-desc { font-size: 9.5pt; color: var(--gray); margin-bottom: 4px; }
+
+      ul.bullets { padding-left: 16px; margin-top: 4px; }
+      ul.bullets li { font-size: 9.5pt; color: var(--gray); margin-bottom: 3px; }
+      ul.bullets li::marker { color: var(--accent); }
+
+      /* ── Skills grid ─────────────────────────────────────────── */
+      .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 32px; }
+      .skill-group-name {
+        font-family: 'Arial', 'Helvetica', sans-serif;
+        font-size: 9pt;
+        font-weight: 700;
+        color: var(--black);
+        margin-bottom: 2px;
+      }
+      .skill-list { font-size: 9.5pt; color: var(--gray); }
+
+      /* ── Projects ────────────────────────────────────────────── */
+      .project-tech { font-size: 8.5pt; color: var(--light-gray); margin-top: 3px; }
+
+      /* ── Two-column layout ───────────────────────────────────── */
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+      /* ── Print ───────────────────────────────────────────────── */
+      @media print {
+        body { font-size: 10pt; }
+        .page { padding: 28px 36px; }
+        @page { margin: 0; size: A4; }
+        a { color: var(--accent) !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+
+      <!-- ── Header ── -->
+      <header class="header">
+        <div class="header-left">
+          <h1>Abenezer Ayalneh</h1>
+          <p class="tagline">Full-Stack Developer &mdash; TypeScript &middot; Angular &middot; React &middot; Nest.js</p>
+        </div>
+        <div class="header-right">
+          <div><a href="mailto:abenezer.ayalneh.42@gmail.com">abenezer.ayalneh.42@gmail.com</a></div>
+          <div>+251 916 667 538</div>
+          <div><a href="https://www.linkedin.com/in/abenezer-ayalneh-b579911b5/" target="_blank">linkedin.com/in/abenezer-ayalneh</a></div>
+          <div><a href="https://github.com/abenezer-ayalneh" target="_blank">github.com/abenezer-ayalneh</a></div>
+          <div><a href="https://abenezer-ayalneh.vercel.app" target="_blank">abenezer-ayalneh.vercel.app</a></div>
+        </div>
+      </header>
+
+      <hr />
+
+      <!-- ── Summary ── -->
+      <section class="section">
+        <p style="font-size:10pt; color: var(--gray); line-height:1.6;">
+          Full-Stack Developer with 5+ years of experience building scalable, production-ready web applications.
+          Specialises in TypeScript-based frontend and backend development with Angular, React, and Nest.js.
+          Proven track record delivering across gaming and enterprise domains — from solo side projects
+          to leading multi-person engineering teams.
+        </p>
+      </section>
+
+      <hr />
+
+      <!-- ── Work Experience ── -->
+      <section class="section">
+        <p class="section-title">Work Experience</p>
+
+        <!-- Multi Matrix -->
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="entry-title">Fullstack Developer</span>
+              <span class="entry-company"> &mdash; <a href="https://www.multimatrixlimited.com/" target="_blank">Multi Matrix Ltd</a></span>
+            </div>
+            <div class="entry-meta">June 2024 – July 2025</div>
+          </div>
+          <div class="entry-location">Hong Kong, China &middot; Remote</div>
+          <ul class="bullets">
+            <li>Built a mobile-first sports betting UI using Angular 18–20+ and Ionic, delivered for a white-label client</li>
+            <li>Integrated third-party WebSocket APIs for real-time price updates, using Web Workers for off-thread data processing to maintain smooth UI performance</li>
+            <li>Contributed to the Nest.js backend to resolve third-party API integration issues</li>
+          </ul>
+        </div>
+
+        <hr class="thin" />
+
+        <!-- Ablaze Labs -->
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="entry-title">Team Lead / Full-Stack Developer</span>
+              <span class="entry-company"> &mdash; <a href="https://www.ablazelabs.com/" target="_blank">Ablaze Labs</a></span>
+            </div>
+            <div class="entry-meta">January 2023 – June 2024</div>
+          </div>
+          <div class="entry-location">Addis Ababa, Ethiopia &middot; On-site</div>
+          <ul class="bullets">
+            <li>Led development of a multi-tenant Telegram SaaS bot for an online virtual betting game — handles payments and delivers live game result updates</li>
+            <li>Built a suite of reusable microservices (auth, file management, configuration, geo-location, search engine) that reduced preparation time for subsequent microservice projects by 40%</li>
+            <li>Delivered an experimental NewSQL project using SurrealDB + cirql ORM with Nest.js, covering simple CRUDs through to complex graph relationships</li>
+          </ul>
+        </div>
+
+        <hr class="thin" />
+
+        <!-- BGI Ethiopia -->
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="entry-title">Junior Developer</span>
+              <span class="entry-company"> &mdash; <a href="https://bgiethiopia.com/" target="_blank">BGI Ethiopia</a></span>
+            </div>
+            <div class="entry-meta">April 2021 – January 2023</div>
+          </div>
+          <div class="entry-location">Addis Ababa, Ethiopia &middot; On-site</div>
+          <ul class="bullets">
+            <li>Built a document validation and standardization system used across all departments — cut the planned standardization timeline by 60% (from 10 months to 4)</li>
+            <li>Developed an overtime management system handling scheduling and approval across 6 company sites with 450+ employees and a 3-level manager approval workflow</li>
+            <li>Implemented an LDAP-based authentication system for all in-house applications — eliminated 100% of auth-related help desk tickets</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ── Projects ── -->
+      <section class="section">
+        <p class="section-title">Projects</p>
+
+        <div class="two-col">
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-title">Lynx &mdash; Word Guessing Game</span>
+            </div>
+            <div><a href="https://gametrix.org" style="font-size:9pt;">gametrix.org</a></div>
+            <p style="font-size:9.5pt; color:var(--gray); margin-top:4px;">
+              Real-time multiplayer word guessing game with WebRTC voice communication between players.
+              Colyseus handles game-state sync; LiveKit powers in-game voice chat.
+            </p>
+            <p class="project-tech">Angular · NgRx SignalStore · Nest.js · Colyseus · LiveKit · PostgreSQL · Docker</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-title">Triads &mdash; Word Puzzle Game</span>
+            </div>
+            <div><a href="https://triads.gametrix.org" style="font-size:9pt;">triads.gametrix.org</a></div>
+            <p style="font-size:9.5pt; color:var(--gray); margin-top:4px;">
+              Single-player puzzle game on web, iOS, and Android. Physics-driven floating word bubbles (Matter.js),
+              fluid GSAP animations, and fully accountless local-storage statistics.
+            </p>
+            <p class="project-tech">Angular · Ionic · Capacitor · Matter.js · GSAP · Nest.js · PostgreSQL · Docker</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-title">White-Label Sports Betting Platform</span>
+            </div>
+            <div><a href="https://m.freedemokit.com" style="font-size:9pt;">m.freedemokit.com</a></div>
+            <p style="font-size:9.5pt; color:var(--gray); margin-top:4px;">
+              Production-grade Angular + Ionic app with NgRx SignalStore state management
+              and Web Workers for off-thread WebSocket processing under high-frequency market data.
+            </p>
+            <p class="project-tech">Angular · Ionic · NgRx SignalStore · WebSocket · Web Workers · TailwindCSS</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-title">Portfolio Website</span>
+            </div>
+            <div><a href="https://abenezer-ayalneh.vercel.app" style="font-size:9pt;">abenezer-ayalneh.vercel.app</a></div>
+            <p style="font-size:9.5pt; color:var(--gray); margin-top:4px;">
+              Personal portfolio built with Next.js 15 (App Router), shadcn/ui, Framer Motion animations,
+              and Zod-validated forms. Deployed on Vercel with full dark/light mode.
+            </p>
+            <p class="project-tech">Next.js · React · TypeScript · TailwindCSS · shadcn/ui · Framer Motion</p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ── Skills ── -->
+      <section class="section">
+        <p class="section-title">Skills</p>
+        <div class="skills-grid">
+          <div>
+            <p class="skill-group-name">Languages</p>
+            <p class="skill-list">TypeScript, JavaScript, PHP</p>
+          </div>
+          <div>
+            <p class="skill-group-name">Frontend</p>
+            <p class="skill-list">Angular, React, Next.js, Ionic, TailwindCSS, NgRx</p>
+          </div>
+          <div>
+            <p class="skill-group-name">Backend</p>
+            <p class="skill-list">Nest.js, Node.js, Express, Laravel, REST APIs, WebSockets</p>
+          </div>
+          <div>
+            <p class="skill-group-name">Databases</p>
+            <p class="skill-list">PostgreSQL, MySQL, Prisma, Redis</p>
+          </div>
+          <div>
+            <p class="skill-group-name">Infrastructure &amp; Tools</p>
+            <p class="skill-list">Docker, Git, Vercel, nginx, PM2</p>
+          </div>
+          <div>
+            <p class="skill-group-name">Real-time &amp; Media</p>
+            <p class="skill-list">Colyseus, LiveKit, WebRTC, Web Workers</p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ── Education ── -->
+      <section class="section">
+        <p class="section-title">Education</p>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="entry-title">Bachelor of Science in Computer Science</span>
+              <span class="entry-company"> &mdash; <a href="http://www.aau.edu.et/" target="_blank">Addis Ababa University</a></span>
+            </div>
+            <div class="entry-meta">October 2016 – December 2020</div>
+          </div>
+          <div class="entry-location">Addis Ababa, Ethiopia</div>
+        </div>
+      </section>
+
+      <!-- ── Languages ── -->
+      <section class="section" style="margin-bottom:0;">
+        <p class="section-title">Languages</p>
+        <p style="font-size:9.5pt; color:var(--gray);">
+          <strong style="color:var(--black);">English</strong> &mdash; Professional fluency &nbsp;&nbsp;
+          <strong style="color:var(--black);">Amharic</strong> &mdash; Native
+        </p>
+      </section>
+
+    </div>
+  </body>
+</html>

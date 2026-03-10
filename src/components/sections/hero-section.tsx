@@ -120,7 +120,7 @@ export function HeroSection() {
               className="gap-2 border-primary/50 text-primary hover:bg-primary/10"
               asChild
             >
-              <a href="/resume.pdf" download>
+              <a href="/resume.pdf" download="Abenezer Ayalneh -- Resume.pdf">
                 <Download className="h-4 w-4" /> Resume
               </a>
             </Button>

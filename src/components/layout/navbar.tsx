@@ -73,7 +73,7 @@ export function Navbar() {
             className="hidden md:flex border-primary/50 text-primary hover:bg-primary/10 hover:text-primary"
             asChild
           >
-            <a href="/resume.pdf" download aria-label="Download resume">
+            <a href="/resume.pdf" download="Abenezer Ayalneh -- Resume.pdf" aria-label="Download resume">
               Resume
             </a>
           </Button>
@@ -117,7 +117,7 @@ export function Navbar() {
                     className="w-full border-primary/50 text-primary hover:bg-primary/10"
                     asChild
                   >
-                    <a href="/resume.pdf" download>
+                    <a href="/resume.pdf" download="Abenezer Ayalneh -- Resume.pdf">
                       Download Resume
                     </a>
                   </Button>
