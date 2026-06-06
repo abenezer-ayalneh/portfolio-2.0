@@ -6,8 +6,7 @@ import { Button } from '@/components/ui/button'
 import { SectionWrapper, staggerContainer, fadeUpItem } from '@/components/shared/section-wrapper'
 import { ProjectCard } from '@/components/projects/project-card'
 import { projects } from '@/data/projects'
-import { Github } from 'lucide-react'
-import type { Metadata } from 'next'
+import { Github } from '@/components/icons/brand-icons'
 
 export default function ProjectsPage() {
   return (

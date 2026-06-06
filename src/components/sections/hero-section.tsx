@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin, Mail, Phone } from 'lucide-react'
+import { ArrowRight, Download, Mail, Phone } from 'lucide-react'
+import { Github, Linkedin } from '@/components/icons/brand-icons'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { toast } from 'sonner'

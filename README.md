@@ -1,6 +1,6 @@
 # Abenezer Ayalneh — Portfolio
 
-A personal portfolio site built with **Next.js 15** (App Router), **TypeScript**, **Tailwind CSS**, and **shadcn/ui**. It showcases work experience, projects, skills, and provides a contact form with validation.
+A personal portfolio site built with **Next.js 16** (App Router), **React 19**, **TypeScript**, **Tailwind CSS v4**, and **shadcn/ui**. It showcases work experience, projects, skills, and provides a contact form with validation.
 
 ## Features
 
@@ -16,9 +16,9 @@ A personal portfolio site built with **Next.js 15** (App Router), **TypeScript**
 
 | Category   | Tools |
 |-----------|--------|
-| Framework | Next.js 15 (App Router), React 18 |
+| Framework | Next.js 16 (App Router), React 19 |
 | Language  | TypeScript |
-| Styling   | Tailwind CSS, shadcn/ui (Radix UI), CSS variables |
+| Styling   | Tailwind CSS v4, shadcn/ui (Radix UI), CSS variables |
 | Forms     | react-hook-form, Zod, @hookform/resolvers |
 | Animations| Framer Motion |
 | UI / UX   | Sonner (toasts), Lucide React (icons) |
@@ -50,12 +50,13 @@ src/
 ### Prerequisites
 
 - **Node.js** 20+ (see `.nvmrc`; Vercel uses this for deployment)
+- **pnpm** (the project's package manager; `corepack enable` picks up the pinned version)
 
 ### Install and run
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -63,14 +64,14 @@ Open [http://localhost:3000](http://localhost:3000).
 ### Build and start (production)
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 ### Lint
 
 ```bash
-npm run lint
+pnpm lint
 ```
 
 ## Deployment (Vercel)

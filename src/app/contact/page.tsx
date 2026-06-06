@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Mail, Phone, Linkedin, Calendar } from 'lucide-react'
+import { Mail, Phone, Calendar } from 'lucide-react'
+import { Linkedin } from '@/components/icons/brand-icons'
 import { SectionWrapper } from '@/components/shared/section-wrapper'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { ContactForm } from '@/components/contact/contact-form'
-import { Separator } from '@/components/ui/separator'
 import { SITE_CONFIG } from '@/data/social'
 
 export const metadata: Metadata = {
