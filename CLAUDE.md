@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal portfolio site (Abenezer Ayalneh). Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, shadcn/ui (Radix). Deployed on Vercel; a `Dockerfile` also exists for container builds.
 
-> Note: the README's "Next.js 15 / React 18 / Tailwind 3" is stale — see the actual versions in `package.json`.
+The visual design is the "amber-CRT" redesign — warm amber accent on a near-monochrome base, Space Grotesk / Inter / JetBrains Mono type, a moderate terminal motif. The shared design vocabulary (Accent, Base, Terminal motif, Split hero, Feature row, etc.) is defined in `CONTEXT.md`; the direction and its trade-offs are recorded in `docs/adr/0001-amber-crt-redesign-direction.md`. CRT primitives (`.bg-grid`, `.terminal-panel`, `.crt-scanlines`, `.crt-vignette`, `.text-glow`, cursor/flicker) live in `globals.css` and are contained to the hero.
 
 ## Commands
 
@@ -28,7 +28,7 @@ Commits are enforced by a Husky `commit-msg` hook running **commitlint** with `@
 
 ## Architecture
 
-- **Content is data-driven.** All site content lives in `src/data/*.ts` (`work`, `projects`, `education`, `skills`, `social`). Components render from these arrays. To change site content, edit the data files — not the components. `src/data/social.ts` holds `SITE_CONFIG` with runtime endpoints: `formSubmitEndpoint` (contact form posts to FormSubmit.co) and `calendlyUrl` (contact page booking link).
+- **Content is data-driven.** All site content lives in `src/data/*.ts` (`work`, `projects`, `education`, `skills`, `social`). Components render from these arrays. To change site content, edit the data files — not the components. `src/data/social.ts` holds `SITE_CONFIG` with the `formSubmitEndpoint` runtime endpoint (contact form posts to FormSubmit.co).
 
 - **Routing** — App Router pages: `/` (`src/app/page.tsx`), `/projects`, `/contact`. `src/app/layout.tsx` is the root: theme provider, navbar, footer, and metadata/SEO.
 

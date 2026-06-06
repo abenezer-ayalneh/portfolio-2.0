@@ -11,10 +11,12 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-1">
-            <Link href="/" className="font-bold text-lg">
-              <span className="text-primary">Abenezer</span> Ayalneh
+            <Link href="/" className="font-mono text-base">
+              <span className="text-primary">~/</span>abenezer
             </Link>
-            <p className="text-sm text-muted-foreground">Full-Stack Developer</p>
+            <p className="font-mono text-xs text-muted-foreground">
+              <span className="text-primary/60">$</span> full-stack developer
+            </p>
           </div>
 
           <div className="flex items-center gap-4">
@@ -48,8 +50,9 @@ export function Footer() {
 
         <Separator className="my-6" />
 
-        <p className="text-center text-sm text-muted-foreground">
-          © {currentYear} Abenezer Ayalneh. Built with Next.js & shadcn/ui.
+        <p className="text-center font-mono text-xs text-muted-foreground">
+          <span className="text-primary/60">{'//'}</span> © {currentYear} Abenezer Ayalneh · built
+          with next.js · tailwind · framer-motion
         </p>
       </div>
     </footer>

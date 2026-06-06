@@ -40,5 +40,4 @@ export const SITE_CONFIG = {
   url: 'https://abenezer-ayalneh.vercel.app',
   ogImage: 'https://abenezer-ayalneh.vercel.app/og.png',
   formSubmitEndpoint: 'https://formsubmit.co/ajax/7f836068829d2e4bd8487383f30acdae',
-  calendlyUrl: 'https://cal.com',
 }

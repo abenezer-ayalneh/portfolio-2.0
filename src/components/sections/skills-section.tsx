@@ -2,33 +2,23 @@
 
 import { motion } from 'framer-motion'
 import { SectionWrapper, staggerContainer, fadeUpItem } from '@/components/shared/section-wrapper'
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { SectionHeading } from '@/components/shared/section-heading'
+import { MonoTag } from '@/components/shared/mono-tag'
 import { skillCategories } from '@/data/skills'
 
 export function SkillsSection() {
   return (
-    <section
-      id="skills"
-      aria-labelledby="skills-heading"
-      className="py-20 lg:py-28 bg-muted/30"
-    >
+    <section id="skills" aria-labelledby="skills-heading" className="bg-muted/30 py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionWrapper>
-          <div className="flex flex-col items-start gap-2 mb-12">
-            <Badge variant="accent" className="text-xs uppercase tracking-widest">
-              Skills
-            </Badge>
-            <h2
-              id="skills-heading"
-              className="text-3xl font-bold tracking-tight sm:text-4xl"
-            >
-              Tech stack
-            </h2>
-            <p className="text-muted-foreground max-w-xl">
-              Technologies I work with across the full stack — from UI to infrastructure.
-            </p>
-          </div>
+          <SectionHeading
+            index="04"
+            eyebrow="stack"
+            title="Tech stack"
+            titleId="skills-heading"
+            description="Technologies I work with across the full stack — from UI to infrastructure."
+            className="mb-12"
+          />
         </SectionWrapper>
 
         <motion.div
@@ -36,30 +26,19 @@ export function SkillsSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
-          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
         >
           {skillCategories.map((category) => (
             <motion.div key={category.category} variants={fadeUpItem}>
-              <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 transition-colors duration-300">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-base font-semibold text-muted-foreground uppercase tracking-wider">
-                    {category.category}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <Badge
-                        key={skill.name}
-                        variant="secondary"
-                        className="text-sm font-medium hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
-                      >
-                        {skill.name}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <h3 className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                <span className="text-primary/60">/</span>
+                {category.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <MonoTag key={skill.name}>{skill.name}</MonoTag>
+                ))}
+              </div>
             </motion.div>
           ))}
         </motion.div>

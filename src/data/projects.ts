@@ -8,6 +8,12 @@ export interface ProjectEntry {
   liveUrl?: string
   githubUrl?: string
   featured: boolean
+  /**
+   * Path to a screenshot under `public/` (e.g. `/projects/lynx.png`), shown in
+   * the visual half of the feature row. When omitted, a branded placeholder is
+   * rendered instead — drop the image in and set this to upgrade.
+   */
+  image?: string
 }
 
 export const projects: ProjectEntry[] = [

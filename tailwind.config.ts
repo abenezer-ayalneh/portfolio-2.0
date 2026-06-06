@@ -11,12 +11,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Amber accent + warm near-black base. `accent` is theme-aware so the
+        // whole site re-tints with the CSS variables (light + dark).
         accent: {
-          DEFAULT: '#7ED957',
-          foreground: '#0f172a',
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
         },
-        surface: '#102429',
-        deep: '#0B0B09',
+        surface: 'hsl(24 12% 9%)',
+        deep: 'hsl(20 14% 4%)',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -54,6 +56,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'Arial', 'Helvetica', 'sans-serif'],
+        display: ['var(--font-display)', 'var(--font-sans)', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       keyframes: {
         'accordion-down': {

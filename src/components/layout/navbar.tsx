@@ -16,11 +16,12 @@ import { cn } from '@/lib/utils'
 import { useState } from 'react'
 
 const navLinks = [
-  { label: 'About', href: '/#about' },
-  { label: 'Experience', href: '/#experience' },
-  { label: 'Skills', href: '/#skills' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'about', href: '/#about' },
+  { label: 'experience', href: '/#experience' },
+  { label: 'skills', href: '/#skills' },
+  { label: 'ai', href: '/#ai' },
+  { label: 'projects', href: '/projects' },
+  { label: 'contact', href: '/contact' },
 ]
 
 export function Navbar() {
@@ -40,11 +41,12 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-lg tracking-tight hover:text-primary transition-colors"
+          className="group flex items-center font-mono text-base font-medium tracking-tight"
           aria-label="Abenezer Ayalneh — home"
         >
-          <span className="text-primary">A</span>
-          <span className="hidden sm:inline">Abenezer</span>
+          <span className="text-primary">~/</span>
+          <span className="text-foreground group-hover:text-primary transition-colors">abenezer</span>
+          <span className="ml-0.5 text-primary cursor-blink" aria-hidden="true">_</span>
         </Link>
 
         {/* Desktop navigation */}
@@ -54,12 +56,13 @@ export function Navbar() {
               <Link
                 href={link.href}
                 className={cn(
-                  'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                  'px-3 py-2 rounded-md font-mono text-sm transition-colors',
                   isActive(link.href)
                     ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    : 'text-muted-foreground hover:text-foreground'
                 )}
               >
+                <span className="text-primary/60">/</span>
                 {link.label}
               </Link>
             </li>
@@ -70,11 +73,11 @@ export function Navbar() {
           <Button
             variant="outline"
             size="sm"
-            className="hidden md:flex border-primary/50 text-primary hover:bg-primary/10 hover:text-primary"
+            className="hidden md:flex font-mono text-xs border-primary/50 text-primary hover:bg-primary/10 hover:text-primary"
             asChild
           >
             <a href="/resume.pdf" download="Abenezer Ayalneh -- Resume.pdf" aria-label="Download resume">
-              Resume
+              resume.pdf
             </a>
           </Button>
           <ThemeToggle />
@@ -102,12 +105,13 @@ export function Navbar() {
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      'px-4 py-3 rounded-lg text-base font-medium transition-colors',
+                      'px-4 py-3 rounded-lg font-mono text-base transition-colors',
                       isActive(link.href)
                         ? 'bg-primary/10 text-primary'
                         : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                     )}
                   >
+                    <span className="text-primary/60">/</span>
                     {link.label}
                   </Link>
                 ))}

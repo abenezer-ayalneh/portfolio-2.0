@@ -2,13 +2,16 @@
 
 A personal portfolio site built with **Next.js 16** (App Router), **React 19**, **TypeScript**, **Tailwind CSS v4**, and **shadcn/ui**. It showcases work experience, projects, skills, and provides a contact form with validation.
 
+The design is a futuristic, bold "amber-CRT" direction: a warm amber accent on a near-monochrome base, Space Grotesk / Inter / JetBrains Mono typography, and a moderate terminal motif (a CRT terminal panel in the hero, monospace labels and tags). See `CONTEXT.md` and `docs/adr/0001-amber-crt-redesign-direction.md`.
+
 ## Features
 
-- **Dark / light mode** — Theme toggle with `next-themes`; theme persists across sessions
+- **Dark / light mode** — Dark-first theme toggle with `next-themes`; theme persists across sessions
+- **Split hero** — Bold display statement beside a CRT terminal panel that types `whoami` / `cat stack.txt` / `uptime`
 - **Responsive layout** — Single responsive render path (no duplicate mobile/desktop markup); mobile navigation via sheet/sidebar
 - **Routing** — Next.js App Router with pages: `/` (home), `/projects`, `/contact`
 - **Contact form** — `react-hook-form` + Zod validation, field-level errors, success/error toasts (Sonner)
-- **Scroll animations** — Framer Motion entry animations on sections and grids
+- **Motion** — Framer Motion scroll-entry animations, animated stat counters, and magnetic buttons (all respect `prefers-reduced-motion`)
 - **Accessibility** — Semantic HTML, ARIA labels, keyboard-friendly navigation
 - **SEO** — Metadata, Open Graph, `robots.txt`, `sitemap.xml`
 
@@ -19,6 +22,7 @@ A personal portfolio site built with **Next.js 16** (App Router), **React 19**, 
 | Framework | Next.js 16 (App Router), React 19 |
 | Language  | TypeScript |
 | Styling   | Tailwind CSS v4, shadcn/ui (Radix UI), CSS variables |
+| Typography| Space Grotesk (display), Inter (body), JetBrains Mono (terminal motif) via `next/font` |
 | Forms     | react-hook-form, Zod, @hookform/resolvers |
 | Animations| Framer Motion |
 | UI / UX   | Sonner (toasts), Lucide React (icons) |
@@ -28,17 +32,17 @@ A personal portfolio site built with **Next.js 16** (App Router), **React 19**, 
 ```
 src/
 ├── app/                    # Next.js App Router
-│   ├── layout.tsx          # Root layout (theme, nav, footer, metadata)
-│   ├── page.tsx            # Home (hero, about, skills, experience, education)
-│   ├── projects/page.tsx   # Projects listing
-│   ├── contact/page.tsx    # Contact form + booking link
-│   └── globals.css         # Global styles & design tokens
+│   ├── layout.tsx          # Root layout (fonts, theme, nav, footer, metadata)
+│   ├── page.tsx            # Home (hero, stats, featured work, about+education, experience, skills, CTA)
+│   ├── projects/page.tsx   # Projects listing (alternating feature rows)
+│   ├── contact/page.tsx    # Contact form + details
+│   └── globals.css         # Global styles, design tokens, CRT primitives
 ├── components/
 │   ├── layout/             # Navbar, Footer
-│   ├── sections/           # Hero, About, Skills, Experience, Education
-│   ├── projects/           # ProjectCard
+│   ├── sections/           # Hero, StatsStrip, FeaturedProjects, About, Experience, Skills, CtaBand
+│   ├── projects/           # ProjectFeatureRow
 │   ├── contact/            # ContactForm
-│   ├── shared/             # SectionWrapper (animations), ThemeToggle
+│   ├── shared/             # SectionWrapper, SectionHeading, MonoTag, Magnetic, ThemeToggle
 │   └── ui/                 # shadcn-style components (Button, Card, Badge, etc.)
 ├── data/                   # Content (work, projects, education, skills, social)
 └── lib/
@@ -85,7 +89,7 @@ pnpm lint
 
 - **Contact form** — Submits to FormSubmit.co; endpoint is in `src/data/social.ts` (`SITE_CONFIG.formSubmitEndpoint`).
 - **Resume** — Place `resume.pdf` in `public/`; the nav "Resume" button links to `/resume.pdf`.
-- **Calendar booking** — Link is in `src/data/social.ts` (`SITE_CONFIG.calendlyUrl`); used on the contact page.
+- **Project screenshots** — Drop images in `public/projects/` and set `image` on each entry in `src/data/projects.ts`; rows fall back to a branded placeholder when unset.
 
 ## License
 
