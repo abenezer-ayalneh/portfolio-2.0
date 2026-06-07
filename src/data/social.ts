@@ -36,7 +36,7 @@ export const SITE_CONFIG = {
   name: 'Abenezer Ayalneh',
   title: 'Abenezer Ayalneh — Full-Stack Developer',
   description:
-    'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, React, and Nest.js.',
+    'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, Nest.js, React, and Next.js.',
   url: 'https://abenezer-ayalneh.vercel.app',
   ogImage: 'https://abenezer-ayalneh.vercel.app/og.png',
   formSubmitEndpoint: 'https://formsubmit.co/ajax/7f836068829d2e4bd8487383f30acdae',

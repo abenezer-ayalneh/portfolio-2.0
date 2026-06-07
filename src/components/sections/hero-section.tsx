@@ -109,8 +109,9 @@ export function HeroSection() {
               I build scalable, production-ready web applications with{' '}
               <span className="font-medium text-foreground">TypeScript</span>,{' '}
               <span className="font-medium text-foreground">Angular</span>,{' '}
+              <span className="font-medium text-foreground">Nest.js</span>,{' '}
               <span className="font-medium text-foreground">React</span>, and{' '}
-              <span className="font-medium text-foreground">Nest.js</span>. 5+ years across gaming
+              <span className="font-medium text-foreground">Next.js</span>. 5+ years across gaming
               and enterprise.
             </motion.p>
 
@@ -181,7 +182,7 @@ export function HeroSection() {
 
 const LINES = [
   { cmd: 'whoami', out: 'Abenezer Ayalneh — Full-Stack Developer' },
-  { cmd: 'cat stack.txt', out: 'TypeScript · React · Angular · Nest.js' },
+  { cmd: 'cat stack.txt', out: 'TypeScript · Angular · Nest.js · React · Next.js' },
   { cmd: 'uptime', out: '5+ years · gaming + enterprise · remote-ready' },
 ] as const
 

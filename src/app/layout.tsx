@@ -25,24 +25,30 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abenezer-ayalneh.vercel.app'),
+  manifest: '/site.webmanifest',
   icons: {
-    icon: '/logo.svg',
-    shortcut: '/logo.svg',
-    apple: '/logo.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   title: {
     default: 'Abenezer Ayalneh — Full-Stack Developer',
     template: '%s | Abenezer Ayalneh',
   },
   description:
-    'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, React, and Nest.js.',
+    'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, Nest.js, React, and Next.js.',
   keywords: [
     'Full-Stack Developer',
     'TypeScript',
+    'Angular',
+    'Nest.js',
     'React',
     'Next.js',
-    'Angular',
-    'NestJS',
     'Portfolio',
     'Abenezer Ayalneh',
   ],
@@ -54,7 +60,7 @@ export const metadata: Metadata = {
     url: 'https://abenezer-ayalneh.vercel.app',
     title: 'Abenezer Ayalneh — Full-Stack Developer',
     description:
-      'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, React, and Nest.js.',
+      'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, Nest.js, React, and Next.js.',
     siteName: 'Abenezer Ayalneh Portfolio',
     images: [
       {
@@ -69,7 +75,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Abenezer Ayalneh — Full-Stack Developer',
     description:
-      'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, React, and Nest.js.',
+      'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, Nest.js, React, and Next.js.',
     images: ['/og.png'],
   },
   robots: {

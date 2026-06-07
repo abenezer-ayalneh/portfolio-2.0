@@ -20,9 +20,9 @@ export const skillCategories: SkillCategory[] = [
   {
     category: 'Frontend',
     skills: [
+      { name: 'Angular' },
       { name: 'React' },
       { name: 'Next.js' },
-      { name: 'Angular' },
       { name: 'TailwindCSS' },
       { name: 'Ionic' },
       { name: 'NgRx' },
