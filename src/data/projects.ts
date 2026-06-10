@@ -104,7 +104,7 @@ export const projects: ProjectEntry[] = [
     solution:
       'Migrated to Next.js 15 (App Router) with shadcn/ui components, next-themes for dark/light mode, react-hook-form + Zod for form validation, and Framer Motion for scroll-triggered animations.',
     techStack: ['Next.js', 'React', 'TypeScript', 'TailwindCSS', 'shadcn/ui', 'Framer Motion', 'Zod'],
-    liveUrl: 'https://abenezer-ayalneh.vercel.app',
+    liveUrl: 'https://abenezer-ayalneh.dev',
     featured: false,
   },
 ]

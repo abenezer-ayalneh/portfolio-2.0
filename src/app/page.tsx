@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, React, and Nest.js.',
   alternates: {
-    canonical: 'https://abenezer-ayalneh.vercel.app',
+    canonical: 'https://abenezer-ayalneh.dev',
   },
 }
 

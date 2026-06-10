@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://abenezer-ayalneh.vercel.app'),
+  metadataBase: new URL('https://abenezer-ayalneh.dev'),
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://abenezer-ayalneh.vercel.app',
+    url: 'https://abenezer-ayalneh.dev',
     title: 'Abenezer Ayalneh — Full-Stack Developer',
     description:
       'Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, Nest.js, React, and Next.js.',
