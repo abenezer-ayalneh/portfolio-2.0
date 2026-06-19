@@ -363,6 +363,103 @@ Run deployments:
 ./deploy.sh
 ```
 
+### Using GitHub Actions (Recommended)
+
+For automated deployments on every push to `main`, use GitHub Actions:
+
+1. **Create the workflow file:**
+   Create `.github/workflows/deploy.yml` with the following content:
+
+   ```yaml
+   name: Deploy to VPS
+
+   on:
+     push:
+       branches:
+         - main
+
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+
+       steps:
+         - name: Checkout code
+           uses: actions/checkout@v4
+
+         - name: Set up Docker Buildx
+           uses: docker/setup-buildx-action@v3
+
+         - name: Login to Docker Hub
+           uses: docker/login-action@v3
+           with:
+             username: ${{ secrets.DOCKERHUB_USERNAME }}
+             password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+         - name: Build and push Docker image
+           uses: docker/build-push-action@v6
+           with:
+             context: .
+             push: true
+             tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+             cache-from: type=gha
+             cache-to: type=gha,mode=max
+
+         - name: Deploy to VPS
+           uses: appleboy/ssh-action@v1.1.1
+           with:
+             host: ${{ secrets.VPS_IP }}
+             username: ${{ secrets.VPS_USER }}
+             key: ${{ secrets.VPS_SSH_KEY }}
+             script: |
+               # Navigate to project directory
+               cd /opt/portfolio
+               
+               # Pull latest image
+               sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+               
+               # Stop and remove existing container
+               sudo docker-compose -f docker-compose.prod.yml down
+               
+               # Start new container
+               sudo docker-compose -f docker-compose.prod.yml up -d
+               
+               # Check container status
+               sudo docker ps
+               
+               # Check logs for errors
+               sudo docker-compose -f docker-compose.prod.yml logs --tail=50
+   ```
+
+2. **Set up repository secrets:**
+   In your GitHub repository settings → Secrets and variables → Actions:
+
+   - `DOCKERHUB_USERNAME` - Your Docker Hub username
+   - `DOCKERHUB_TOKEN` - Docker Hub access token (with write permissions)
+   - `VPS_IP` - Your VPS server IP
+   - `VPS_USER` - SSH username (usually `root`)
+   - `VPS_SSH_KEY` - SSH private key (base64 encoded)
+
+3. **Configure your VPS:**
+   - Ensure Docker and Docker Compose are installed
+   - Set up SSH access with the provided key
+   - Clone the repository to `/opt/portfolio` (or update the path in the workflow)
+
+4. **Test the workflow:**
+   Push a test commit to the `main` branch to trigger the deployment.
+
+### Comparison
+
+| Method | Pros | Cons |
+|--------|------|------|
+| Bash Script | Simple, full control | Manual, error-prone |
+| GitHub Actions | Automated, reliable, integrates with CI/CD | Requires GitHub setup, more complex initially |
+
+GitHub Actions is recommended for production deployments as it provides:
+- Automated deployments on every push
+- Built-in error handling and logging
+- Integration with GitHub's CI/CD ecosystem
+- Ability to rollback if issues occur
+
 ---
 
 ## Troubleshooting

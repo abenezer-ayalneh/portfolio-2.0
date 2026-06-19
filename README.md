@@ -78,12 +78,36 @@ pnpm start
 pnpm lint
 ```
 
-## Deployment (Vercel)
+## Deployment
+
+### Vercel
 
 1. Connect the repo to Vercel.
 2. **Framework preset:** Next.js (auto-detected).
 3. **Node.js version:** 20.x or 24.x (or leave unset; `engines` in `package.json` and `.nvmrc` specify Node 20+).
 4. Do **not** set a custom **Output Directory**; Next.js uses its own build output.
+
+### GitHub Actions + VPS
+
+Automated deployment to a VPS using Docker:
+
+1. Set up GitHub repository secrets:
+   - `DOCKERHUB_USERNAME` - Your Docker Hub username
+   - `DOCKERHUB_TOKEN` - Docker Hub access token (with write permissions)
+   - `VPS_IP` - Your VPS server IP
+   - `VPS_USER` - SSH username (usually `root`)
+   - `VPS_SSH_KEY` - SSH private key (base64 encoded)
+
+2. Configure your VPS:
+   - Ensure Docker and Docker Compose are installed
+   - Set up SSH access with the provided key
+   - Clone the repository to `/opt/portfolio` (or update the path in the workflow)
+
+3. The workflow will:
+   - Build the Docker image and push to Docker Hub
+   - SSH into the VPS and deploy the latest image using Docker Compose
+
+See `.github/workflows/deploy.yml` for the complete workflow configuration.
 
 ## Configuration
 
