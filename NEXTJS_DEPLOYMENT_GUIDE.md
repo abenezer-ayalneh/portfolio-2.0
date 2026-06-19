@@ -412,7 +412,7 @@ For automated deployments on every push to `main`, use GitHub Actions:
              key: ${{ secrets.VPS_SSH_KEY }}
              script: |
                # Navigate to project directory
-               cd /opt/portfolio
+               cd /home/portfolio
                
                # Pull latest image
                sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
@@ -442,7 +442,7 @@ For automated deployments on every push to `main`, use GitHub Actions:
 3. **Configure your VPS:**
    - Ensure Docker and Docker Compose are installed
    - Set up SSH access with the provided key
-   - Clone the repository to `/opt/portfolio` (or update the path in the workflow)
+   - Clone the repository to `/home/portfolio` (or update the path in the workflow)
 
 4. **Test the workflow:**
    Push a test commit to the `main` branch to trigger the deployment.

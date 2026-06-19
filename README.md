@@ -101,7 +101,7 @@ Automated deployment to a VPS using Docker:
 2. Configure your VPS:
    - Ensure Docker and Docker Compose are installed
    - Set up SSH access with the provided key
-   - Clone the repository to `/opt/portfolio` (or update the path in the workflow)
+   - Clone the repository to `/home/portfolio` (or update the path in the workflow)
 
 3. The workflow will:
    - Build the Docker image and push to Docker Hub

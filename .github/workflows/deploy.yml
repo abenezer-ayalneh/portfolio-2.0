@@ -39,7 +39,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             # Navigate to project directory
-            cd /opt/portfolio
+            cd /home/portfolio
             
             # Pull latest image
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
