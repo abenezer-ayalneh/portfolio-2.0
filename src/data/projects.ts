@@ -1,22 +1,44 @@
 export interface ProjectEntry {
-  title: string
-  shortDescription: string
-  description: string
-  problem: string
-  solution: string
-  techStack: string[]
-  liveUrl?: string
-  githubUrl?: string
-  featured: boolean
+  title: string;
+  shortDescription: string;
+  description: string;
+  problem: string;
+  solution: string;
+  techStack: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  featured: boolean;
   /**
    * Path to a screenshot under `public/` (e.g. `/projects/lynx.png`), shown in
    * the visual half of the feature row. When omitted, a branded placeholder is
    * rendered instead — drop the image in and set this to upgrade.
    */
-  image?: string
+  image?: string;
 }
 
 export const projects: ProjectEntry[] = [
+  {
+    title: 'Huddle — Self-Hosted Video Conferencing',
+    shortDescription: 'A self-hosted, browser-based video conferencing app built on LiveKit.',
+    description: 'A real-time video conferencing solution that puts you in control. Schedule meetings, create instant rooms, and collaborate with crystal-clear video and audio. Guests join with just a link — no accounts, no installs required.',
+    problem: 'Cloud-based video platforms compromise your privacy, lock you into their ecosystem, and charge for features you need. You want real-time collaboration without sacrificing control or paying recurring fees.',
+    solution: 'Built a complete self-hosted video conferencing solution using LiveKit for WebRTC media, NestJS for token management and room services, and Next.js for the frontend. Users can host their own meetings with full control over infrastructure and data.',
+    techStack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Nest.js',
+      'LiveKit',
+      'Redis',
+      'PostgreSQL',
+      'Prisma',
+      'Docker',
+      'Caddy',
+      'Better Auth',
+    ],
+    liveUrl: 'https://huddle.abenezer-ayalneh.dev',
+    featured: true,
+  },
   {
     title: 'Lynx — Word Guessing Game',
     shortDescription: 'A real-time multiplayer word guessing game with voice communication.',
@@ -107,4 +129,4 @@ export const projects: ProjectEntry[] = [
     liveUrl: 'https://abenezer-ayalneh.dev',
     featured: false,
   },
-]
+];
