@@ -20,5 +20,5 @@ jobs:
             git pull origin main
             set -a && source .env.production && set +a
             docker build -t nextjs-app:latest .
-            sudo docker-compose -f docker-compose.prod.yml up -d
-            sudo docker-compose -f docker-compose.prod.yml logs -f nextjs
+            docker compose -f docker-compose.prod.yml up -d
+            docker compose -f docker-compose.prod.yml logs --tail=50 nextjs
