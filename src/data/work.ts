@@ -13,6 +13,24 @@ export interface WorkEntry {
 
 export const workHistory: WorkEntry[] = [
   {
+    title: 'Freelance',
+    company: {
+      name: 'Upwork',
+      link: 'https://www.upwork.com/freelancers/~011960ab2f98daca80',
+    },
+    jobType: 'Full Time',
+    period: 'July 2025 - Present',
+    location: 'Remote',
+    description: [
+      'Projects I worked on include:',
+    ],
+    bulletPoints: [
+      'Triads — A word puzzle game where players find hidden keywords connecting groups of three cue words.',
+      'Lynx — A real-time multiplayer word guessing game with voice communication.',
+      'Migrating an American Football betting platform from Lovable to make it as a self hosted deployable app'
+    ],
+  },
+  {
     title: 'Fullstack Developer',
     company: {
       name: 'Multi Matrix Ltd',
