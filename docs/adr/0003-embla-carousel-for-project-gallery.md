@@ -1,0 +1,3 @@
+# Embla Carousel (via shadcn) for the project Gallery
+
+The [[gallery]] inside each [[feature-row]] needs drag/swipe, scroll-snap momentum, keyboard navigation, and correct ARIA — all of which are easy to get subtly wrong by hand. We chose Embla, added through the shadcn `carousel` CLI primitive (consistent with how every other `ui/` primitive is generated), rather than hand-rolling a `useState`/`translateX` track or building gestures on the already-present framer-motion. This deliberately overrides the initial "no new carousel dependency" instinct: the accessibility and gesture correctness were judged worth one small, swappable dependency. Embla stays behind the shadcn wrapper, so replacing it later is contained to that component.

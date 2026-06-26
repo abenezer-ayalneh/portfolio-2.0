@@ -1,14 +1,19 @@
 {
-  "name": "Abenezer Ayalneh — Full-Stack Developer",
-  "short_name": "Abenezer",
-  "description": "Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, Nest.js, React, and Next.js.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0c0a08",
-  "theme_color": "#f97a24",
-  "icons": [
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
-  ]
+	"name": "Abenezer Ayalneh — Full-Stack Developer",
+	"short_name": "Abenezer",
+	"description": "Full-Stack Developer with 5+ years of experience building scalable web applications using TypeScript, Angular, Nest.js, React, and Next.js.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#0c0a08",
+	"theme_color": "#f97a24",
+	"icons": [
+		{ "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+		{ "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" },
+		{
+			"src": "/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512",
+			"purpose": "any maskable"
+		}
+	]
 }

@@ -25,8 +25,12 @@ The home hero: a Space Grotesk statement on one side and a CRT-styled [[terminal
 _Avoid_: terminal hero, CRT page (the CRT is contained to the hero, not site-wide).
 
 **Feature row**:
-A full-width, alternating left/right project block on `/projects` (and the home teaser): a framed real screenshot on one side, title + problem→solution + mono tech tags + live/code links on the other.
+A full-width, alternating left/right project block on `/projects` (and the home teaser): a framed real screenshot — or a [[gallery]] of them — on one side, title + problem→solution + mono tech tags + live/code links on the other.
 _Avoid_: project card (reserved for any smaller uniform-grid tile; the redesign uses Feature rows, not cards).
+
+**Gallery**:
+The swipeable set of real screenshots inside a [[feature-row]]'s framed visual panel, with left/right arrows and a dot page indicator. Driven by the project's `images`; falls back to the branded placeholder when a project has none. Never auto-advances.
+_Avoid_: carousel, slider, slideshow (carousel is the underlying shadcn/embla primitive, not the design term).
 
 **Stats strip**:
 A compact row of animated counters (years of experience, companies, projects) used to feed the "rich/showcase" motion. Numbers come from the data files.

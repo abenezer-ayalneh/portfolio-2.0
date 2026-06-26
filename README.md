@@ -17,15 +17,15 @@ The design is a futuristic, bold "amber-CRT" direction: a warm amber accent on a
 
 ## Tech Stack
 
-| Category   | Tools |
-|-----------|--------|
-| Framework | Next.js 16 (App Router), React 19 |
-| Language  | TypeScript |
-| Styling   | Tailwind CSS v4, shadcn/ui (Radix UI), CSS variables |
-| Typography| Space Grotesk (display), Inter (body), JetBrains Mono (terminal motif) via `next/font` |
-| Forms     | react-hook-form, Zod, @hookform/resolvers |
-| Animations| Framer Motion |
-| UI / UX   | Sonner (toasts), Lucide React (icons) |
+| Category   | Tools                                                                                  |
+| ---------- | -------------------------------------------------------------------------------------- |
+| Framework  | Next.js 16 (App Router), React 19                                                      |
+| Language   | TypeScript                                                                             |
+| Styling    | Tailwind CSS v4, shadcn/ui (Radix UI), CSS variables                                   |
+| Typography | Space Grotesk (display), Inter (body), JetBrains Mono (terminal motif) via `next/font` |
+| Forms      | react-hook-form, Zod, @hookform/resolvers                                              |
+| Animations | Framer Motion                                                                          |
+| UI / UX    | Sonner (toasts), Lucide React (icons)                                                  |
 
 ## Project Structure
 
@@ -92,20 +92,20 @@ pnpm lint
 Automated deployment to a VPS using Docker:
 
 1. Set up GitHub repository secrets:
-   - `DOCKERHUB_USERNAME` - Your Docker Hub username
-   - `DOCKERHUB_TOKEN` - Docker Hub access token (with write permissions)
-   - `VPS_IP` - Your VPS server IP
-   - `VPS_USER` - SSH username (usually `root`)
-   - `VPS_SSH_KEY` - SSH private key (base64 encoded)
+    - `DOCKERHUB_USERNAME` - Your Docker Hub username
+    - `DOCKERHUB_TOKEN` - Docker Hub access token (with write permissions)
+    - `VPS_IP` - Your VPS server IP
+    - `VPS_USER` - SSH username (usually `root`)
+    - `VPS_SSH_KEY` - SSH private key (base64 encoded)
 
 2. Configure your VPS:
-   - Ensure Docker and Docker Compose are installed
-   - Set up SSH access with the provided key
-   - Clone the repository to `/home/portfolio` (or update the path in the workflow)
+    - Ensure Docker and Docker Compose are installed
+    - Set up SSH access with the provided key
+    - Clone the repository to `/home/portfolio` (or update the path in the workflow)
 
 3. The workflow will:
-   - Build the Docker image and push to Docker Hub
-   - SSH into the VPS and deploy the latest image using Docker Compose
+    - Build the Docker image and push to Docker Hub
+    - SSH into the VPS and deploy the latest image using Docker Compose
 
 See `.github/workflows/deploy.yml` for the complete workflow configuration.
 

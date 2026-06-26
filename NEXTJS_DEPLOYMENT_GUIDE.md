@@ -7,6 +7,7 @@ Complete guide to deploy your Next.js project to your VPS with Docker, Nginx, an
 ## Overview
 
 **Target setup:**
+
 - VPS: Ubuntu/Debian with SSH access
 - Domain: abenezer-ayalneh.dev
 - App server: Docker container running Next.js
@@ -161,27 +162,27 @@ Create `docker-compose.prod.yml` in the root directory:
 version: '3.8'
 
 services:
-  nextjs:
-    image: nextjs-app:latest
-    container_name: nextjs-app
-    restart: unless-stopped
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
-      # Add other env vars here
-    networks:
-      - app-network
-    healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+    nextjs:
+        image: nextjs-app:latest
+        container_name: nextjs-app
+        restart: unless-stopped
+        ports:
+            - '3000:3000'
+        environment:
+            - NODE_ENV=production
+            # Add other env vars here
+        networks:
+            - app-network
+        healthcheck:
+            test: ['CMD', 'wget', '--quiet', '--tries=1', '--spider', 'http://localhost:3000/']
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 40s
 
 networks:
-  app-network:
-    driver: bridge
+    app-network:
+        driver: bridge
 ```
 
 ---
@@ -226,6 +227,7 @@ sudo systemctl status caddy
 ```
 
 Caddy automatically:
+
 - Obtains Let's Encrypt certificates
 - Redirects HTTP → HTTPS
 - Renews certificates before expiry
@@ -239,10 +241,10 @@ Point your domain's DNS records to your server IP:
 
 ### For abenezer-ayalneh.dev (root domain):
 
-| Type | Name | Value           |
-|------|------|-----------------|
-| A    | @    | YOUR_SERVER_IP  |
-| A    | www  | YOUR_SERVER_IP  |
+| Type | Name | Value          |
+| ---- | ---- | -------------- |
+| A    | @    | YOUR_SERVER_IP |
+| A    | www  | YOUR_SERVER_IP |
 
 Update these at your domain registrar (GoDaddy, Namecheap, etc.).
 
@@ -354,11 +356,13 @@ sudo docker-compose -f docker-compose.prod.yml logs -f
 ```
 
 Make it executable:
+
 ```bash
 chmod +x deploy.sh
 ```
 
 Run deployments:
+
 ```bash
 ./deploy.sh
 ```
@@ -370,91 +374,92 @@ For automated deployments on every push to `main`, use GitHub Actions:
 1. **Create the workflow file:**
    Create `.github/workflows/deploy.yml` with the following content:
 
-   ```yaml
-   name: Deploy to VPS
+    ```yaml
+    name: Deploy to VPS
 
-   on:
-     push:
-       branches:
-         - main
+    on:
+        push:
+            branches:
+                - main
 
-   jobs:
-     deploy:
-       runs-on: ubuntu-latest
+    jobs:
+        deploy:
+            runs-on: ubuntu-latest
 
-       steps:
-         - name: Checkout code
-           uses: actions/checkout@v4
+            steps:
+                - name: Checkout code
+                  uses: actions/checkout@v4
 
-         - name: Set up Docker Buildx
-           uses: docker/setup-buildx-action@v3
+                - name: Set up Docker Buildx
+                  uses: docker/setup-buildx-action@v3
 
-         - name: Login to Docker Hub
-           uses: docker/login-action@v3
-           with:
-             username: ${{ secrets.DOCKERHUB_USERNAME }}
-             password: ${{ secrets.DOCKERHUB_TOKEN }}
+                - name: Login to Docker Hub
+                  uses: docker/login-action@v3
+                  with:
+                      username: ${{ secrets.DOCKERHUB_USERNAME }}
+                      password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-         - name: Build and push Docker image
-           uses: docker/build-push-action@v6
-           with:
-             context: .
-             push: true
-             tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
-             cache-from: type=gha
-             cache-to: type=gha,mode=max
+                - name: Build and push Docker image
+                  uses: docker/build-push-action@v6
+                  with:
+                      context: .
+                      push: true
+                      tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+                      cache-from: type=gha
+                      cache-to: type=gha,mode=max
 
-         - name: Deploy to VPS
-           uses: appleboy/ssh-action@v1.1.1
-           with:
-             host: ${{ secrets.VPS_IP }}
-             username: ${{ secrets.VPS_USER }}
-             key: ${{ secrets.VPS_SSH_KEY }}
-             script: |
-               # Navigate to project directory
-               cd /home/portfolio
-               
-               # Pull latest image
-               sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
-               
-               # Stop and remove existing container
-               sudo docker-compose -f docker-compose.prod.yml down
-               
-               # Start new container
-               sudo docker-compose -f docker-compose.prod.yml up -d
-               
-               # Check container status
-               sudo docker ps
-               
-               # Check logs for errors
-               sudo docker-compose -f docker-compose.prod.yml logs --tail=50
-   ```
+                - name: Deploy to VPS
+                  uses: appleboy/ssh-action@v1.1.1
+                  with:
+                      host: ${{ secrets.VPS_IP }}
+                      username: ${{ secrets.VPS_USER }}
+                      key: ${{ secrets.VPS_SSH_KEY }}
+                      script: |
+                          # Navigate to project directory
+                          cd /home/portfolio
+
+                          # Pull latest image
+                          sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+
+                          # Stop and remove existing container
+                          sudo docker-compose -f docker-compose.prod.yml down
+
+                          # Start new container
+                          sudo docker-compose -f docker-compose.prod.yml up -d
+
+                          # Check container status
+                          sudo docker ps
+
+                          # Check logs for errors
+                          sudo docker-compose -f docker-compose.prod.yml logs --tail=50
+    ```
 
 2. **Set up repository secrets:**
    In your GitHub repository settings → Secrets and variables → Actions:
 
-   - `DOCKERHUB_USERNAME` - Your Docker Hub username
-   - `DOCKERHUB_TOKEN` - Docker Hub access token (with write permissions)
-   - `VPS_IP` - Your VPS server IP
-   - `VPS_USER` - SSH username (usually `root`)
-   - `VPS_SSH_KEY` - SSH private key (base64 encoded)
+    - `DOCKERHUB_USERNAME` - Your Docker Hub username
+    - `DOCKERHUB_TOKEN` - Docker Hub access token (with write permissions)
+    - `VPS_IP` - Your VPS server IP
+    - `VPS_USER` - SSH username (usually `root`)
+    - `VPS_SSH_KEY` - SSH private key (base64 encoded)
 
 3. **Configure your VPS:**
-   - Ensure Docker and Docker Compose are installed
-   - Set up SSH access with the provided key
-   - Clone the repository to `/home/portfolio` (or update the path in the workflow)
+    - Ensure Docker and Docker Compose are installed
+    - Set up SSH access with the provided key
+    - Clone the repository to `/home/portfolio` (or update the path in the workflow)
 
 4. **Test the workflow:**
    Push a test commit to the `main` branch to trigger the deployment.
 
 ### Comparison
 
-| Method | Pros | Cons |
-|--------|------|------|
-| Bash Script | Simple, full control | Manual, error-prone |
+| Method         | Pros                                       | Cons                                          |
+| -------------- | ------------------------------------------ | --------------------------------------------- |
+| Bash Script    | Simple, full control                       | Manual, error-prone                           |
 | GitHub Actions | Automated, reliable, integrates with CI/CD | Requires GitHub setup, more complex initially |
 
 GitHub Actions is recommended for production deployments as it provides:
+
 - Automated deployments on every push
 - Built-in error handling and logging
 - Integration with GitHub's CI/CD ecosystem
@@ -591,6 +596,7 @@ scp root@your-server-ip:/opt/nextjs-app-backup-*.tar.gz ./backups/
 ## Next Steps
 
 After this is running smoothly, you can:
+
 1. Deploy the main Huddle project to a subdomain (e.g., `huddle.abenezer-ayalneh.dev`)
 2. Set up CI/CD for automatic deployments on push
 3. Add monitoring and alerting

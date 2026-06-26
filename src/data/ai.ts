@@ -1,7 +1,7 @@
 export interface AiCapability {
-  title: string
-  description: string
-  tags: string[]
+	title: string
+	description: string
+	tags: string[]
 }
 
 /**
@@ -10,22 +10,19 @@ export interface AiCapability {
  * the only AI claims on the site, so keep them honest.
  */
 export const aiCapabilities: AiCapability[] = [
-  {
-    title: 'LLM app development',
-    description:
-      'Retrieval-augmented generation over your own data, tool-calling agents, and token-streamed chat — shipped as real product features.',
-    tags: ['RAG', 'Agents', 'Tool-calling', 'Prompt engineering', 'Streaming', 'Structured output'],
-  },
-  {
-    title: 'AI API integration',
-    description:
-      'Model providers wired into web and back-end apps, with embeddings and vector search for semantic retrieval.',
-    tags: ['OpenAI', 'Anthropic', 'Gemini', 'Embeddings', 'Vector search'],
-  },
-  {
-    title: 'AI-assisted engineering',
-    description:
-      'Shipping faster with AI in the loop — modern AI dev tooling and automated, agent-driven workflows.',
-    tags: ['Claude Code', 'Cursor', 'Copilot', 'AI workflows'],
-  },
+	{
+		title: 'LLM app development',
+		description: 'Retrieval-augmented generation over your own data, tool-calling agents, and token-streamed chat — shipped as real product features.',
+		tags: ['RAG', 'Agents', 'Tool-calling', 'Prompt engineering', 'Streaming', 'Structured output'],
+	},
+	{
+		title: 'AI API integration',
+		description: 'Model providers wired into web and back-end apps, with embeddings and vector search for semantic retrieval.',
+		tags: ['OpenAI', 'Anthropic', 'Gemini', 'Embeddings', 'Vector search'],
+	},
+	{
+		title: 'AI-assisted engineering',
+		description: 'Shipping faster with AI in the loop — modern AI dev tooling and automated, agent-driven workflows.',
+		tags: ['Claude Code', 'Cursor', 'Copilot', 'AI workflows'],
+	},
 ]
